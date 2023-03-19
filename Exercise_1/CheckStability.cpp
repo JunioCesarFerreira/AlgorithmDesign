@@ -7,7 +7,6 @@
 
 using namespace std;
 
-/// @brief Estrutura auxiliar para solução do problema Stable Marriage.
 typedef struct
 {
     int id;            // id da pessoa. Deve coincidir com o indice na array.
@@ -16,31 +15,7 @@ typedef struct
     int fiance;        // id do parceiro caso tenha.
 } anybody;
 
-/// @brief Verifica se existem homens solteiros.
-/// @param men Ponteiro para array de homens.
-/// @param m Ponteiro para retorno de indice do primeiro homem solteiro encontrado.
-/// @param size Tamanho da array de homens.
-/// @return True se encontrou algum homen solteiro. False caso contrário.
-bool thereIsFreeMan(anybody* men, int* m, int size)
-{
-    bool result = false;
-    for (int i=0; i<size; i++)
-    {
-        if (men[i].free)
-        {
-            *m = i;
-            result = true;
-            break;
-        }
-    }
-    return result;
-}
-
-/// @brief Verifica se pretendente é preferivel em relação ao parceiro atual.
-/// @param suitor Indice do pretendente
-/// @param intended Mulher pretendida
-/// @param size Tamanho da array de preferências.
-/// @return 
+// Verifica se pretendente é preferivel em relação ao parceiro atual.
 bool prefersThis(int suitor, anybody* intended, int size)
 {
     for (int i=0; i<size; i++)
@@ -53,55 +28,7 @@ bool prefersThis(int suitor, anybody* intended, int size)
     return false;
 }
 
-/// @brief Função de noivado
-/// @param man Homem a ficar noivo.
-/// @param woman Mulher a ficar noiva.
-void engagement(anybody* man, anybody* woman)
-{
-    man->fiance = woman->id;
-    woman->fiance = man->id;
-    man->free = false;
-    woman->free = false;
-    printf("engagement (%d, %d)\n", man->id, woman->id);
-}
-
-/// @brief Algoritmo de busca de casamentos estáveis
-/// @param men Ponteiro para array de homens.
-/// @param women Ponteiro para array de mulheres.
-/// @param length Tamanho das arrays.
-void searchForStablePairs(anybody* men, anybody* women, int length)
-{
-    int m;
-    while (thereIsFreeMan(men, &m, length))
-    {
-        printf("suitor: %d\n", m);
-        for (int i=0; i<length; i++)
-        {
-            int w = men[m].preferences[i];
-            if (women[w].free)
-            {
-                engagement(&men[m], &women[w]);
-                break;
-            }
-            else
-            {
-                if (prefersThis(m, &women[w], length))
-                {
-                    men[women[w].fiance].free = true;
-                    men[women[w].fiance].fiance = -1;
-                    engagement(&men[m], &women[w]);
-                    break;
-                }
-            }
-        }
-    }
-}
-
-/// @brief Função de verificação de estabilidade
-/// @param men Array de homens já noivados.
-/// @param women Array de mulheres já noivadas.
-/// @param length Comprimento dos arrays.
-/// @return True
+// Função de verificação de estabilidade
 bool checkStableMatching(anybody* men, anybody* women, int length)
 {
     for (int i=0; i<length; i++)
@@ -133,23 +60,24 @@ void parse_preferences(string line, int *array);
 // Método auxiliar de verificação de saída.
 string find_on_split(string line, char separator, int pos);
 
-/// @brief Programa principal.
-/// @return 
+/// @brief Programa principal de verificação dos arquivos de teste.
 int main() 
 {
-    ifstream file;
-    file.open("1.in");
+    ifstream file_in;
+    ifstream file_out;
+    file_in.open("1.in");
+    file_out.open("1.out");
     string line;
     string input;
     string output;
-    if (file.is_open()) 
+    if (file_in.is_open() && file_out.is_open()) 
     {
-        getline (file, line);
+        getline (file_in, line);
         input += line + "\n";
         int amount_test = stoi(line);
         for (int test=0; test<amount_test; test++)
         {
-            getline (file, line);
+            getline (file_in, line);
             input += line + "\n";
 
             int test_length = stoi(line);
@@ -157,7 +85,7 @@ int main()
             anybody* men = new anybody[test_length];
             for (int i=0; i<test_length; i++)
             {
-                getline (file, line);
+                getline (file_in, line);
                 input += line + "\n";
                 men[i].id = i;
                 men[i].fiance = -1;
@@ -169,7 +97,7 @@ int main()
             anybody* women = new anybody[test_length];
             for (int i=0; i<test_length; i++)
             {
-                getline (file, line);
+                getline (file_in, line);
                 input += line + "\n";
                 women[i].id = i;
                 women[i].fiance = -1;
@@ -178,8 +106,16 @@ int main()
                 parse_preferences(line, women[i].preferences);
             }
             
-            printf ("\nsearch for weddings\n");
-            searchForStablePairs(men, women, test_length);
+        for (int p=0; p< test_length; p++)
+        {
+            string tmp;
+            getline(file_out, tmp);
+            int w = (int)(find_on_split(tmp, ' ', 0)[0]-48)-1;
+            int m = (int)(find_on_split(tmp, ' ', 1)[0]-48)-1;
+            printf("test parse %d %d\n", w, m);
+            men[m].fiance = w;
+            women[w].fiance = m;
+        }
 
             if (checkStableMatching(men, women, test_length))
             {
@@ -199,27 +135,12 @@ int main()
             }
         }
     }
-    file.close();
+    file_in.close();
+    file_out.close();
 
     cout << "\ninput:\n" << input;
 
-    cout << "\noutput:\n" << output;
-    
-    cout << "\nexpected:\n";
-    file.open("1.out");
-    if (file.is_open()) 
-    {
-        int pos = 0;
-        while (file)
-        {
-            getline(file, line);
-            string result = find_on_split(output, '\n', pos);
-            pos++;
-            if (result != line) cout << line << " failed.  act: " << result << endl;
-            else cout << line << " success. act: " << result << endl;
-        }
-    }
-    file.close();
+    cout << "\noutput:\n" << output;    
 
     getch();
     return 0;
