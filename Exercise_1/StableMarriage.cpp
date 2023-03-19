@@ -50,6 +50,7 @@ bool prefersThis(int suitor, anybody* intended, int size)
         // Prefere o noivo a atual
         if (intended->preferences[i]==intended->fiance) return false;
     }
+    cout << "Erro!" << endl;
     return false;
 }
 
@@ -62,7 +63,7 @@ void engagement(anybody* man, anybody* woman)
     woman->fiance = man->id;
     man->free = false;
     woman->free = false;
-    printf("engagement (%d, %d)\n", man->id, woman->id);
+    printf("engagement (%d, %d)\n", man->id+1, woman->id+1);
 }
 
 /// @brief Algoritmo de busca de casamentos estáveis
@@ -74,7 +75,7 @@ void searchForStablePairs(anybody* men, anybody* women, int length)
     int m;
     while (thereIsFreeMan(men, &m, length))
     {
-        printf("suitor: %d\n", m);
+        printf("suitor: %d\n", m+1);
         for (int i=0; i<length; i++)
         {
             int w = men[m].preferences[i];
@@ -178,7 +179,7 @@ int main()
                 parse_preferences(line, women[i].preferences);
             }
             
-            printf ("\nsearch for weddings\n");
+            printf ("\nsearch for stable pairs\n");
             searchForStablePairs(men, women, test_length);
 
             if (checkStableMatching(men, women, test_length))
