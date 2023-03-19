@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/// @brief Estrutura auxiliar para solução do problema Stable Marriage.
 typedef struct
 {
     int id;            // id da pessoa. Deve coincidir com o indice na array.
@@ -15,7 +16,11 @@ typedef struct
     int fiance;        // id do parceiro caso tenha.
 } anybody;
 
-// Verifica se existem homens solteiros.
+/// @brief Verifica se existem homens solteiros.
+/// @param men Ponteiro para array de homens.
+/// @param m Ponteiro para retorno de indice do primeiro homem solteiro encontrado.
+/// @param size Tamanho da array de homens.
+/// @return True se encontrou algum homen solteiro. False caso contrário.
 bool thereIsFreeMan(anybody* men, int* m, int size)
 {
     bool result = false;
@@ -31,7 +36,11 @@ bool thereIsFreeMan(anybody* men, int* m, int size)
     return result;
 }
 
-// Verifica se pretendente é preferivel em relação ao parceiro atual.
+/// @brief Verifica se pretendente é preferivel em relação ao parceiro atual.
+/// @param suitor Indice do pretendente
+/// @param intended Mulher pretendida
+/// @param size Tamanho da array de preferências.
+/// @return 
 bool prefersThis(int suitor, anybody* intended, int size)
 {
     for (int i=0; i<size; i++)
@@ -44,7 +53,9 @@ bool prefersThis(int suitor, anybody* intended, int size)
     return false;
 }
 
-// Função de noivado
+/// @brief Função de noivado
+/// @param man Homem a ficar noivo.
+/// @param woman Mulher a ficar noiva.
 void engagement(anybody* man, anybody* woman)
 {
     man->fiance = woman->id;
@@ -54,7 +65,10 @@ void engagement(anybody* man, anybody* woman)
     printf("engagement (%d, %d)\n", man->id, woman->id);
 }
 
-// Algoritmo de busca de casamentos estáveis
+/// @brief Algoritmo de busca de casamentos estáveis
+/// @param men Ponteiro para array de homens.
+/// @param women Ponteiro para array de mulheres.
+/// @param length Tamanho das arrays.
 void searchForWeddings(anybody* men, anybody* women, int length)
 {
     int m;
@@ -83,7 +97,11 @@ void searchForWeddings(anybody* men, anybody* women, int length)
     }
 }
 
-// Função de verificação de estabilidade
+/// @brief Função de verificação de estabilidade
+/// @param men Array de homens já noivados.
+/// @param women Array de mulheres já noivadas.
+/// @param length Comprimento dos arrays.
+/// @return True
 bool checkStableMatching(anybody* men, anybody* women, int length)
 {
     for (int i=0; i<length; i++)
@@ -115,7 +133,9 @@ void parse_preferences(string line, int *array);
 // Método auxiliar de verificação de saída.
 string find_on_split(string line, char separator, int pos);
 
-int main(int argc, char **argv) 
+/// @brief Programa principal.
+/// @return 
+int main() 
 {
     ifstream file;
     file.open("1.in");
@@ -172,9 +192,9 @@ int main(int argc, char **argv)
             
             for (int i=0; i<test_length; i++)
             {
-                output += to_string(men[i].id+1);
+                output += to_string(women[i].id+1);
                 output += " ";
-                output += to_string(men[i].fiance+1);
+                output += to_string(women[i].fiance+1);
                 output += "\n";
             }
         }
@@ -195,17 +215,20 @@ int main(int argc, char **argv)
             getline(file, line);
             string result = find_on_split(output, '\n', pos);
             pos++;
-            if (result != line) cout << line << " failed" << endl;
-            else cout << line << " success" << endl;
+            if (result != line) cout << line << " failed.  act: " << result << endl;
+            else cout << line << " success. act: " << result << endl;
         }
     }
     file.close();
-    
+
     getch();
     return 0;
 }
 
 
+/// @brief Converte preferências dada pelo arquivo de entrada.
+/// @param line Linha do arquivo de entrada.
+/// @param array Ponteiro array de preferências.
 void parse_preferences(string line, int *array)
 {     
     char separator = ' ';
@@ -235,6 +258,11 @@ void parse_preferences(string line, int *array)
     if (s.length()>0) array[arr_index] = stoi(s) - 1;
 }
 
+/// @brief Busca uma posição especificada no split da string de entrada.
+/// @param line String alvo do split.
+/// @param separator Caractere separador a ser utilizado no split.
+/// @param pos Posição desejada dentro do split.
+/// @return String na posição especificada no split da string de entrada
 string find_on_split(string line, char separator, int pos)
 {     
     int i = 0;    
