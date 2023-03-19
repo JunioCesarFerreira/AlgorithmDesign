@@ -94,6 +94,12 @@ inline void searchForStablePairs(anybody* men, anybody* women, int length)
                     engagement(&men[m], &women[w]);
                     break;
                 }
+                else
+                {
+                    #ifdef DEBUG_THIS
+                    printf("%d rejected by %d)\n", m+1, w+1);
+                    #endif
+                }
             }
         }
     }
@@ -108,51 +114,51 @@ int main()
     cin >> amount_test;
     for (int t=0; t<amount_test; t++)
     {        
-            int test_length;
+        int test_length;
 
-            cin >> test_length;
+        cin >> test_length;
 
-            anybody* men = new anybody[test_length];
-            for (int i=0; i<test_length; i++)
+        anybody* men = new anybody[test_length];
+        for (int i=0; i<test_length; i++)
+        {
+            int tmp;
+            cin >> tmp;
+            men[i].id = tmp-1;
+            men[i].fiance = -1;
+            men[i].free = true;
+            men[i].preferences = new int[test_length];
+            for (int j=0; j<test_length; j++)
             {
-                int tmp;
                 cin >> tmp;
-                men[i].id = tmp-1;
-                men[i].fiance = -1;
-                men[i].free = true;
-                men[i].preferences = new int[test_length];
-                for (int j=0; j<test_length; j++)
-                {
-                    cin >> tmp;
-                    men[i].preferences[j] = tmp-1;
-                }
+                men[i].preferences[j] = tmp-1;
             }
+        }
 
-            anybody* women = new anybody[test_length];
-            for (int i=0; i<test_length; i++)
+        anybody* women = new anybody[test_length];
+        for (int i=0; i<test_length; i++)
+        {
+            int tmp;
+            cin >> tmp;
+            women[i].id = tmp-1;
+            women[i].fiance = -1;
+            women[i].free = true;
+            women[i].preferences = new int[test_length];
+            for (int j=0; j<test_length; j++)
             {
-                int tmp;
                 cin >> tmp;
-                women[i].id = tmp-1;
-                women[i].fiance = -1;
-                women[i].free = true;
-                women[i].preferences = new int[test_length];
-                for (int j=0; j<test_length; j++)
-                {
-                    cin >> tmp;
-                    women[i].preferences[j] = tmp-1;
-                }
+                women[i].preferences[j] = tmp-1;
             }
+        }
             
-            searchForStablePairs(men, women, test_length);
+        searchForStablePairs(men, women, test_length);
             
-            for (int i=0; i<test_length; i++)
-            {
-                output += to_string(women[i].id+1);
-                output += " ";
-                output += to_string(women[i].fiance+1);
-                output += "\n";
-            }
+        for (int i=0; i<test_length; i++)
+        {
+            output += to_string(women[i].id+1);
+            output += " ";
+            output += to_string(women[i].fiance+1);
+            output += "\n";
+        }
     }
 
     cout << output;

@@ -1,30 +1,34 @@
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <queue>
+#include <vector>
 
 using namespace std;
+
+typedef vector<vector<int>> matrix_t;
 
 #define DEBUG_THIS
 
 /// @brief Verifica se pretendente é preferivel em relação ao parceiro atual.
-/// @param suitor Indice do pretendente
-/// @param intended Mulher pretendida
-/// @param size Tamanho da array de preferências.
-/// @return 
-inline bool prefersThis(int suitor, int* intendedPref, int fiance, int size)
+/// @param suitor Pretendente.
+/// @param fiance Noivo atual.
+/// @param intendedPref Pretendida.
+/// @return True se pretendida prefere o pretendente.
+inline bool prefersThis(int suitor, int fiance, vector<int> *intendedPref)
 {
-    int* inverse = new int[size];
-    for (int i=0; i<size; i++) inverse[intendedPref[i]] = i;
+    vector<int> inverse(intendedPref->size());
+    for (int i=0; i<inverse.size(); i++) inverse[intendedPref->at(i)] = i;
     return inverse[suitor] < inverse[fiance];
 }
 
-/// @brief Algoritmo de busca de casamentos estáveis
-/// @param men Ponteiro para array de homens.
-/// @param women Ponteiro para array de mulheres.
-/// @param length Tamanho das arrays.
-inline void searchForStablePairs(int* menPref, int* womenPref, int* w_partner, int length)
+/// @brief Algoritmo de busca de casamentos estáveis.
+/// @param men Matriz de preferências dos homens.
+/// @param women Matriz de preferências das mulheres.
+/// @return Vetor indexado pelas mulheres com valores de parceiros.
+inline vector<int> searchForStablePairs(matrix_t men, matrix_t women)
 {
+    int length = men.size();
+    vector<int> w_partner(length, -1);
     queue<int> men_queue;
     for (int i=0; i<length; i++)
     {
@@ -40,7 +44,7 @@ inline void searchForStablePairs(int* menPref, int* womenPref, int* w_partner, i
         #endif
         for (int i=0; i<length; i++)
         {
-            int w = menPref[m*length + i];
+            int w = men[m][i];
             if (w_partner[w]<0)
             {
                 w_partner[w] = m;
@@ -51,7 +55,7 @@ inline void searchForStablePairs(int* menPref, int* womenPref, int* w_partner, i
             }
             else
             {
-                if (prefersThis(m, &womenPref[w*length], w_partner[w], length))
+                if (prefersThis(m, w_partner[w], &women[w]))
                 {
                     men_queue.push(w_partner[w]);
                     w_partner[w] = m;
@@ -60,9 +64,16 @@ inline void searchForStablePairs(int* menPref, int* womenPref, int* w_partner, i
                     #endif
                     break;
                 }
+                else
+                {
+                    #ifdef DEBUG_THIS
+                    printf("%d rejected by %d)\n", m+1, w+1);
+                    #endif
+                }
             }
         }
     }
+    return w_partner;
 }
 
 /// @brief Programa principal.
@@ -74,39 +85,39 @@ int main()
     cin >> amount_test;
     for (int t=0; t<amount_test; t++)
     {        
-            int test_length;
+        int test_length;
 
-            cin >> test_length;
+        cin >> test_length;
 
-            int* menPref = new int[test_length*test_length];
-            for (int i=0; i<test_length; i++)
+        matrix_t men(test_length, vector<int>(test_length));
+        matrix_t women(test_length, vector<int>(test_length));
+                
+        for(int i=0; i<test_length; i++)
+        {
+            int w;
+            cin >> w;
+            for(int j=0; j<test_length; j++)
             {
-                int tmp;
-                cin >> tmp;
-                for (int j=0; j<test_length; j++)
-                {
-                    cin >> tmp;
-                    menPref[i*test_length+j] = tmp-1;
-                }
+                cin >> w;
+                men[i][j] = w-1;
             }
+        }
 
-            int* womenPref = new int[test_length*test_length];
-            for (int i=0; i<test_length; i++)
+        for (int i=0; i<test_length; i++)
+        {
+            int m;
+            cin >> m;
+            for (int j=0; j<test_length; j++)
             {
-                int tmp;
-                cin >> tmp;
-                for (int j=0; j<test_length; j++)
-                {
-                    cin >> tmp;
-                    womenPref[i*test_length+j] = tmp-1;
-                }
+                cin >> m;
+                women[i][j] = m-1;
             }
+        }
             
-            int* w_partner = new int[test_length];
-            searchForStablePairs(menPref, womenPref, w_partner, test_length);
+        vector<int> w_partner = searchForStablePairs(men, women);
             
-            for (int i=0; i< test_length; i++)
-                output += to_string(i+1) + " " +to_string(w_partner[i]+1) + "\n";
+        for (int i=0; i< test_length; i++)
+            output += to_string(i+1) + " " +to_string(w_partner[i]+1) + "\n";
     }
 
     cout << output;
