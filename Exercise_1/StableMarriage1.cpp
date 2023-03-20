@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define DEBUG_THIS
+//#define DEBUG_THIS
 
 /// @brief Estrutura auxiliar para solução do problema Stable Marriage.
 typedef struct
@@ -14,19 +14,14 @@ typedef struct
     int fiance;        // id do parceiro caso tenha.
 } anybody;
 
-/// @brief Verifica se existem homens solteiros.
-/// @param men Ponteiro para array de homens.
-/// @param m Ponteiro para retorno de indice do primeiro homem solteiro encontrado.
-/// @param size Tamanho da array de homens.
-/// @return True se encontrou algum homen solteiro. False caso contrário.
-inline bool thereIsFreeMan(anybody* men, int* m, int size)
+inline bool thereIsAnybodyFree(anybody* suitors, int* free_suitor, int size)
 {
     bool result = false;
     for (int i=0; i<size; i++)
     {
-        if (men[i].free)
+        if (suitors[i].free)
         {
-            *m = i;
+            *free_suitor = i;
             result = true;
             break;
         }
@@ -34,11 +29,6 @@ inline bool thereIsFreeMan(anybody* men, int* m, int size)
     return result;
 }
 
-/// @brief Verifica se pretendente é preferivel em relação ao parceiro atual.
-/// @param suitor Indice do pretendente
-/// @param intended Mulher pretendida
-/// @param size Tamanho da array de preferências.
-/// @return 
 inline bool prefersThis(int suitor, anybody* intended, int size)
 {
     for (int i=0; i<size; i++)
@@ -51,62 +41,53 @@ inline bool prefersThis(int suitor, anybody* intended, int size)
     return false;
 }
 
-/// @brief Função de noivado
-/// @param man Homem a ficar noivo.
-/// @param woman Mulher a ficar noiva.
-inline void engagement(anybody* man, anybody* woman)
+inline void engagement(anybody* suitor, anybody* intended)
 {
-    man->fiance = woman->id;
-    woman->fiance = man->id;
-    man->free = false;
-    woman->free = false;
+    suitor->fiance = intended->id;
+    intended->fiance = suitor->id;
+    suitor->free = false;
+    intended->free = false;
     #ifdef DEBUG_THIS
     printf("engagement (%d, %d)\n", man->id+1, woman->id+1);
     #endif
 }
 
-/// @brief Algoritmo de busca de casamentos estáveis
-/// @param men Ponteiro para array de homens.
-/// @param women Ponteiro para array de mulheres.
-/// @param length Tamanho das arrays.
-inline void searchForStablePairs(anybody* men, anybody* women, int length)
+inline void searchForStablePairs(anybody* suitors, anybody* receives_proposal, int length)
 {
     int m;
-    while (thereIsFreeMan(men, &m, length))
+    while (thereIsAnybodyFree(suitors, &m, length))
     {
         #ifdef DEBUG_THIS
         printf("suitor: %d\n", m+1);
         #endif
         for (int i=0; i<length; i++)
         {
-            int w = men[m].preferences[i];
-            if (women[w].free)
+            int w = suitors[m].preferences[i];
+            if (receives_proposal[w].free)
             {
-                engagement(&men[m], &women[w]);
+                engagement(&suitors[m], &receives_proposal[w]);
                 break;
             }
             else
             {
-                if (prefersThis(m, &women[w], length))
+                if (prefersThis(m, &receives_proposal[w], length))
                 {
-                    men[women[w].fiance].free = true;
-                    men[women[w].fiance].fiance = -1;
-                    engagement(&men[m], &women[w]);
+                    suitors[receives_proposal[w].fiance].free = true;
+                    suitors[receives_proposal[w].fiance].fiance = -1;
+                    engagement(&suitors[m], &receives_proposal[w]);
                     break;
                 }
+                #ifdef DEBUG_THIS
                 else
                 {
-                    #ifdef DEBUG_THIS
-                    printf("%d rejected by %d)\n", m+1, w+1);
-                    #endif
+                    printf("%d retains %d)\n", m+1, w+1);
                 }
+                #endif
             }
         }
     }
 }
 
-/// @brief Programa principal.
-/// @return 
 int main() 
 {
     string output;
@@ -150,7 +131,7 @@ int main()
             }
         }
             
-        searchForStablePairs(men, women, test_length);
+        searchForStablePairs(women, men, test_length);
             
         for (int i=0; i<test_length; i++)
         {
