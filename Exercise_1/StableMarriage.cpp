@@ -83,7 +83,9 @@ int main()
 {
     string output;
     int amount_test;
+    
     cin >> amount_test;
+
     for (int test=0; test<amount_test; test++)
     {        
         int test_length;
