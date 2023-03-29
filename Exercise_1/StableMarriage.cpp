@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <queue>
 #include <vector>
 
@@ -81,9 +80,8 @@ inline void invertPreferences(matrix_t *matrix)
 
 int main() 
 {
-    string output;
     int amount_test;
-    
+
     cin >> amount_test;
 
     for (int test=0; test<amount_test; test++)
@@ -127,10 +125,8 @@ int main()
             m_partner[w_partner[i]] = i;
             
         for (int i=0; i< test_length; i++)
-            output += to_string(i+1) + " " +to_string(m_partner[i]+1) + "\n";
+            printf("%d %d\n", i+1, m_partner[i]+1);
     }
-
-    cout << output;
     
     return 0;
 }
