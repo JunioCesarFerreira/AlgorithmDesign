@@ -3,8 +3,8 @@
 
 #define INPUTS_MAX_SIZE  50
 
-//#define DEBUG_LEVEL_1
-//#define DEBUG_LEVEL_2
+//#define DEBUG_LEVEL_1 // Debug inicial de entrada das funções de verificação
+//#define DEBUG_LEVEL_2 // Debug inicial do desenvolvimento do backtracking
 
 typedef struct
 {
@@ -50,9 +50,9 @@ void printPath(move_t* path)
 /// @param row linha.
 /// @param col coluna
 /// @return 1 se estão dentro, 0 caso contrário.
-int isField(minefield_t mf, int row, int col)
+int isField(minefield_t* mf, int row, int col)
 {
-    if (row >= 0 && row < mf.rows_size && col >= 0 && col < mf.cols_size)
+    if (row >= 0 && row < mf->rows_size && col >= 0 && col < mf->cols_size)
     {
 #ifdef DEBUG_LEVEL_1
         printf("\tisField = 1 where (%d %d)\n", row, col);
@@ -73,9 +73,9 @@ int isField(minefield_t mf, int row, int col)
 /// @param row linha.
 /// @param col coluna.
 /// @return 1 se célula é segura, 0 caso contrário.
-int isSafe(minefield_t mf, int row, int col)
+int isSafe(minefield_t* mf, int row, int col)
 {
-    if (mf.field[row][col] == 0)
+    if (mf->field[row][col] == 0)
     {
 #ifdef DEBUG_LEVEL_1
         printf("isSafe = 0 where (%d %d)\n", row, col);
@@ -89,9 +89,9 @@ int isSafe(minefield_t mf, int row, int col)
         if (isField(mf, rowMove, colMove))
         {
 #ifdef DEBUG_LEVEL_1
-            printf("\t\ttest: (%d %d)=%d\n", rowMove, colMove, mf.field[rowMove][colMove]);
+            printf("\t\ttest: (%d %d)=%d\n", rowMove, colMove, mf->field[rowMove][colMove]);
 #endif
-            if (mf.field[rowMove][colMove] == 0)
+            if (mf->field[rowMove][colMove] == 0)
             {
 #ifdef DEBUG_LEVEL_1
                 printf("isSafe = 0 where (%d %d)\n", row, col);
@@ -112,7 +112,7 @@ int isSafe(minefield_t mf, int row, int col)
 /// @param col coluna.
 /// @param min_path caminho já trilhado.
 /// @return 1 se célula é válida, 0 caso contrário.
-int isValid(minefield_t mf, int row, int col, move_t* min_path)
+int isValid(minefield_t* mf, int row, int col, move_t* min_path)
 {    
     // Verifica se não estão fora do campo e se é segura.
     if (isField(mf, row, col)==1 && isSafe(mf, row, col)==1)
@@ -139,7 +139,7 @@ int isValid(minefield_t mf, int row, int col, move_t* min_path)
 /// @param col coluna.
 /// @param min_path caminho já trilhado.
 /// @return 1 se não é beco sem saída, 0 se for beco sem saída.
-int isADeadEnd(minefield_t mf, int row, int col, move_t* min_path)
+int isADeadEnd(minefield_t* mf, int row, int col, move_t* min_path)
 {    
     int safe = 0;
     for (int i=0; i<4; i++)
@@ -160,11 +160,11 @@ int isADeadEnd(minefield_t mf, int row, int col, move_t* min_path)
 /// @param index_path indexador do caminho trilhado.
 /// @param min_path caminho trilhado.
 /// @param min_path_length comprimento do menor caminho trilhado.
-void find_min_path(minefield_t mf, int row, int col, 
+void find_min_path(minefield_t* mf, int row, int col, 
         int index_path, move_t* min_path, int* min_path_length)
 {
     // Cruzou o campo!
-    if (col == mf.cols_size-1)
+    if (col == mf->cols_size-1)
     {
         if (index_path < *min_path_length)
         {
@@ -246,7 +246,7 @@ int main()
     {
         for (int col=0; col<mf.cols_size; col++)
         {
-            isSafe(mf, row, col);
+            isSafe(&mf, row, col);
         }
     }
 #else
@@ -267,9 +267,9 @@ int main()
         path[0].row = row;
         path[0].col = 0;
 
-        if (isSafe(mf, path[0].row, path[0].col))
+        if (isSafe(&mf, path[0].row, path[0].col))
         {
-            find_min_path(mf, path[0].row, path[0].col, 1, path, &min_path_length);
+            find_min_path(&mf, path[0].row, path[0].col, 1, path, &min_path_length);
         }
     }
 
