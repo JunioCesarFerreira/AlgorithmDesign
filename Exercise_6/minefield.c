@@ -120,17 +120,17 @@ int isSafe(minefield_t* mf, int row, int col)
 /// @param mf campo minado.
 /// @param row linha.
 /// @param col coluna.
-/// @param min_path caminho já trilhado.
+/// @param path_scope caminho já trilhado.
 /// @return 1 se célula é válida, 0 caso contrário.
-int isValid(minefield_t* mf, int row, int col, path_t* min_path)
+int isValid(minefield_t* mf, int row, int col, path_t* path_scope)
 {    
     // Verifica se não estão fora do campo e se é segura.
     if (isField(mf, row, col)==1 && isSafe(mf, row, col)==1)
     {
         // Verifica se já não é parte do caminho.
-        for (int i=0; i<min_path->next_index; i++)
+        for (int i=0; i<path_scope->next_index; i++)
         {
-            if (row == min_path->path[i].row && col == min_path->path[i].col)
+            if (row == path_scope->path[i].row && col == path_scope->path[i].col)
             {
                 return 0;
             }
@@ -145,14 +145,14 @@ int isValid(minefield_t* mf, int row, int col, path_t* min_path)
 /// @param mf campo minado.
 /// @param row linha.
 /// @param col coluna.
-/// @param min_path caminho já trilhado.
+/// @param path_scope caminho já trilhado.
 /// @return 1 se não é beco sem saída, 0 se for beco sem saída.
-int isADeadEnd(minefield_t* mf, int row, int col, path_t* min_path)
+int isADeadEnd(minefield_t* mf, int row, int col, path_t* path_scope)
 {    
     int safe = 0;
     for (int i=0; i<4; i++)
     {
-        if (isValid(mf, row + moves[i].row, col + moves[i].col, min_path))
+        if (isValid(mf, row + moves[i].row, col + moves[i].col, path_scope))
         {
             safe = 1;
             break;
@@ -165,19 +165,18 @@ int isADeadEnd(minefield_t* mf, int row, int col, path_t* min_path)
 /// @param mf campo minado.
 /// @param row linha.
 /// @param col coluna.
-/// @param index_path indexador do caminho trilhado.
-/// @param min_path caminho trilhado.
+/// @param ps caminho trilhado.
 /// @param min_path_length comprimento do menor caminho trilhado.
-void find_min_path(minefield_t* mf, int row, int col, path_t* min_path, int* min_path_length)
+void find_min_path(minefield_t* mf, int row, int col, path_t* ps, int* min_path_length)
 {
     // Cruzou o campo!
     if (col == mf->cols_size-1)
     {
-        if (min_path->next_index < *min_path_length)
+        if (ps->next_index < *min_path_length)
         {
-            *min_path_length = min_path->next_index;
+            *min_path_length = ps->next_index;
 #ifdef DEBUG_LEVEL_2
-            printPath(min_path);
+            printPath(path_scope);
             printf("min = %d\n", *min_path_length);
 #endif
         }
@@ -185,13 +184,13 @@ void find_min_path(minefield_t* mf, int row, int col, path_t* min_path, int* min
     }
 
     // Melhoria! Não completa caminhos que já são maiores que o mínimo.
-    if (min_path->next_index > *min_path_length)
+    if (ps->next_index > *min_path_length)
     {
         return;
     }
 
     // Verifica se é beco sem saída.
-    if (isADeadEnd(mf, row, col, min_path)==0)
+    if (isADeadEnd(mf, row, col, ps)==0)
     {
         return;
     }
@@ -199,18 +198,18 @@ void find_min_path(minefield_t* mf, int row, int col, path_t* min_path, int* min
     // Tenta todas as direções.
     for (int i=0; i<4; i++)
     {
-        if (isValid(mf, row + moves[i].row, col + moves[i].col, min_path))
+        if (isValid(mf, row + moves[i].row, col + moves[i].col, ps))
         {
             row += moves[i].row;
             col += moves[i].col;
-            min_path->path[min_path->next_index].col = col;
-            min_path->path[min_path->next_index].row = row;
-            min_path->next_index++;
+            ps->path[ps->next_index].col = col;
+            ps->path[ps->next_index].row = row;
+            ps->next_index++;
 
-            find_min_path(mf, row, col, min_path, min_path_length);
+            find_min_path(mf, row, col, ps, min_path_length);
             
             // Backtracking
-            min_path->next_index--;
+            ps->next_index--;
             row -= moves[i].row;
             col -= moves[i].col;
         }
@@ -223,6 +222,7 @@ int main()
 #ifdef DEBUG_BENCHMARK_TIME
     clock_t start_time = clock();
 #endif
+
     minefield_t mf;
     path_t path;
     int min_path_length;
