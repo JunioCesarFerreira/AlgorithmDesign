@@ -177,7 +177,7 @@ void find_min_path(minefield_t* mf, int row, int col,
         return;
     }
 
-    // #melhoria! Não completa caminhos que já são maiores que o mínimo.
+    // Melhoria! Não completa caminhos que já são maiores que o mínimo.
     if (index_path > *min_path_length)
     {
         return;
@@ -212,6 +212,7 @@ void find_min_path(minefield_t* mf, int row, int col,
     }
 }
 
+// find_min_path complexity time O(4^N)
 int main() 
 {
     minefield_t mf;
@@ -255,21 +256,19 @@ int main()
 
     for (int row=0; row<mf.rows_size; row++)
     {
-        for (int i=0; i<min_path_length; i++)
-        {
-            path[i] = empty;
-        }
 
 #ifdef DEBUG_LEVEL_2
         printf("START ROW = %d\n", row);
 #endif
 
-        path[0].row = row;
-        path[0].col = 0;
-
-        if (isSafe(&mf, path[0].row, path[0].col))
+        if (isSafe(&mf, row, 0))
         {
-            find_min_path(&mf, path[0].row, path[0].col, 1, path, &min_path_length);
+            for (int i=0; i<min_path_length; i++) path[i] = empty;
+            
+            path[0].row = row;
+            path[0].col = 0;
+
+            find_min_path(&mf, row, 0, 1, path, &min_path_length);
         }
     }
 

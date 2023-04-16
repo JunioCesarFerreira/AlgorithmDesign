@@ -39,6 +39,7 @@ void find_largest_integer(char* num, int k, char* max)
 }
  
 
+// find_largest_integer complexity time O((N^2)^K)
 int main() 
 {
     char M[INPUT_NUM_MAX_SIZE];

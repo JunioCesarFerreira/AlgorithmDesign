@@ -34,7 +34,7 @@ void generate_strings_with_spaces(char* str, int index, char* buffer, int buffer
     buffer_index--; // backtracking
 }
 
-
+// generate_strings_with_spaces complexity time O(2^N)
 int main() 
 {
     char input_string[MAX_INPUT_SIZE];
@@ -45,6 +45,6 @@ int main()
         generate_strings_with_spaces(input_string, 0, buffer, 0);
         printf("\n");
     }
-    
+
     return 0;
 }
