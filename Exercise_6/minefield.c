@@ -4,10 +4,11 @@
 #define INPUTS_MAX_SIZE  50
 #define PATH_BUFFER_SIZE INPUTS_MAX_SIZE*INPUTS_MAX_SIZE
 
-//#define DEBUG_LEVEL_1 // Debug inicial de entrada das funções de verificação
-//#define DEBUG_LEVEL_2 // Debug inicial do desenvolvimento do backtracking
-//#define DEBUG_BENCHMARK_TIME // Medindo tempo de execução do programa
-//#define DEBUG_PATH_VIEW
+//#define DEBUG_LEVEL_1 // Debug inicial de entrada das funções de verificação.
+//#define DEBUG_LEVEL_2 // Debug inicial do desenvolvimento do backtracking.
+//#define DEBUG_BENCHMARK_TIME // Medindo tempo de execução do programa.
+//#define DEBUG_PATH_VIEW // Brincadeira de observar as tentativas.
+//#define DEBUG_FIELD_VIEW // Visualizar o campo minado com . nas células safe e X nas boom.
 
 #ifdef DEBUG_BENCHMARK_TIME
 #include <time.h>
@@ -115,6 +116,49 @@ int isSafe(minefield_t* mf, int row, int col)
     return 1;
 }
 
+int isFold(minefield_t* mf, int row, int col)
+{
+    const move_t folds[4][3] = 
+    {
+        {
+            { .row=0, .col=-1 },
+            { .row=1, .col=0  },
+            { .row=1, .col=-1 }
+        },
+        {
+            { .row=0,  .col=-1 },
+            { .row=-1, .col=0  },
+            { .row=-1, .col=-1 }
+        },
+        {
+            { .row=0,  .col=1 },
+            { .row=-1, .col=0  },
+            { .row=-1, .col=1  }
+        },
+        {
+            { .row=0, .col=1  },
+            { .row=1, .col=0  },
+            { .row=1, .col=1  }
+        }
+    };
+    
+    for (int f=0; f<4; f++)
+    {
+        int i = 0;
+        int r = row+folds[f][i].row;
+        int c = col+folds[f][i].col;
+        while (isField(mf, r, c) && mf->field[r][c] == 2)
+        {
+            i++;
+            r = row+folds[f][i].row;
+            c = col+folds[f][i].col;
+            if (i == 3) return 1;
+        }
+    }
+
+    return 0;
+}
+
 /// @brief Verifica se célula é válida para inserção em caminho.
 /// @param mf campo minado.
 /// @param row linha.
@@ -124,7 +168,7 @@ int isSafe(minefield_t* mf, int row, int col)
 int isValid(minefield_t* mf, int row, int col)
 {    
     // Verifica se não estão fora do campo e se é segura.
-    if (isField(mf, row, col)==1 && isSafe(mf, row, col)==1 && mf->field[row][col]!=2)
+    if (isField(mf, row, col)==1 && isSafe(mf, row, col)==1 && mf->field[row][col]!=2 && isFold(mf, row, col)==0)
     {
         return 1;
     }
@@ -147,36 +191,6 @@ int isADeadEnd(minefield_t* mf, int row, int col)
             return 1;
         }
     }
-    return 0;
-}
-
-int isFold(minefield_t* mf, int row, int col)
-{
-    const move_t fold1[3] = 
-    {
-      { .row=1, .col=0  },
-      { .row=0, .col=-1 },
-      { .row=1, .col= -1}
-    };
-    const move_t fold2[3] = 
-    {
-      { .row=-1, .col=0  },
-      { .row=0,  .col=-1 },
-      { .row=-1, .col= -1}
-    };
-    
-    int i = 0;
-    while (isField(mf, row+fold1[i].row, col+fold1[i].col) 
-            && mf->field[row+fold1[i].row][col+fold1[i].col] == 2
-            && i<3) i++;
-    if (i == 3) return 1;
-    
-    i = 0;
-    while (isField(mf, row+fold1[i].row, col+fold1[i].col) 
-        && mf->field[row+fold2[i].row][col+fold1[i].col] == 2
-        && i<3) i++;        
-    if (i == 3) return 1;
-
     return 0;
 }
 
@@ -261,12 +275,7 @@ void find_min_path(minefield_t* mf, int row, int col, int path_length, int* min_
     printf("\n");
 #endif
         return;
-    }
-
-    if (isFold(mf, row, col)==1)
-    {
-        return;
-    }
+    }   
 
     // Tenta todas as direções.
     for (int i=0; i<4; i++)
@@ -310,6 +319,18 @@ int main()
         }
     }
 
+#ifdef DEBUG_FIELD_VIEW
+    printf("\n");
+    for (int row=0; row<mf.rows_size; row++)
+    {
+        for (int col=0; col<mf.cols_size; col++)
+        {
+            isSafe(&mf, row, col)==1 ? printf(". ") : printf("X ");
+        }
+        printf("\n");
+    }
+#endif 
+
 #ifdef DEBUG_LEVEL_1
     printf("%d %d\n", mf.rows_size, mf.cols_size);
 
@@ -330,6 +351,7 @@ int main()
         {
             isSafe(&mf, row, col);
         }
+        printf("\n");
     }
 #else
    
