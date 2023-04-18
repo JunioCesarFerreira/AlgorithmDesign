@@ -116,6 +116,11 @@ int isSafe(minefield_t* mf, int row, int col)
     return 1;
 }
 
+/// @brief Verifica se caminho dobrou em formando um quadrado 2x2.
+/// @param mf campo minado.
+/// @param row linha.
+/// @param col coluna.
+/// @return 1 se ocorreu dobra, 0 caso contrário.
 int isFold(minefield_t* mf, int row, int col)
 {
     const move_t folds[4][3] = 
@@ -132,8 +137,8 @@ int isFold(minefield_t* mf, int row, int col)
         },
         {
             { .row=0,  .col=1 },
-            { .row=-1, .col=0  },
-            { .row=-1, .col=1  }
+            { .row=-1, .col=0 },
+            { .row=-1, .col=1 }
         },
         {
             { .row=0, .col=1  },
@@ -168,10 +173,11 @@ int isFold(minefield_t* mf, int row, int col)
 int isValid(minefield_t* mf, int row, int col)
 {    
     // Verifica se não estão fora do campo e se é segura.
-    if (isField(mf, row, col)==1 && isSafe(mf, row, col)==1 && mf->field[row][col]!=2 && isFold(mf, row, col)==0)
-    {
-        return 1;
-    }
+    if (isField(mf, row, col) == 1 
+        && isSafe(mf, row, col) == 1 
+        && mf->field[row][col] != 2 
+        && isFold(mf, row, col) == 0
+        ) return 1;
     else 
         return 0;
 }
@@ -202,7 +208,6 @@ int isADeadEnd(minefield_t* mf, int row, int col)
 /// @param min_path_length comprimento do menor caminho trilhado.
 void find_min_path(minefield_t* mf, int row, int col, int path_length, int* min_path_length)
 {    
-
     // Cruzou o campo!
     if (col == mf->cols_size-1)
     {
@@ -233,7 +238,7 @@ void find_min_path(minefield_t* mf, int row, int col, int path_length, int* min_
         return;
     }
 
-    // Melhoria! Não completa caminhos que já são maiores que o mínimo.
+    // Não completa caminhos que já são maiores que o mínimo.
     if (path_length > *min_path_length)
     {
 #ifdef DEBUG_PATH_VIEW
@@ -283,15 +288,14 @@ void find_min_path(minefield_t* mf, int row, int col, int path_length, int* min_
         if (isValid(mf, row + moves[i].row, col + moves[i].col))
         {
             row += moves[i].row;
-            col += moves[i].col;
-            
+            col += moves[i].col;            
             path_length++;
-            mf->field[row][col] = 2;
+            mf->field[row][col] = 2; // Marca caminho trilhado.
 
             find_min_path(mf, row, col, path_length, min_path_length);
             
-            mf->field[row][col] = 1;
             // Backtracking
+            mf->field[row][col] = 1; // Desmarca caminho trilhado.
             path_length--;
             row -= moves[i].row;
             col -= moves[i].col;
