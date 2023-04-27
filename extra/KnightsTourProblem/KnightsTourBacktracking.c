@@ -40,11 +40,11 @@ int nextMove(int board[N][N], int *x, int *y)
  
     for (int i = 0; i < M; i++)
     {
-        int nx = *x + xMove[i];
-        int ny = *y + yMove[i];
-        if (isSafe(nx, ny, board))
+        int next_x = *x + xMove[i];
+        int next_y = *y + yMove[i];
+        if (isSafe(next_x, next_y, board))
         {
-            int deg = getDegree(board, nx, ny);
+            int deg = getDegree(board, next_x, next_y);
             if (deg < min_deg)
             {
                 min_deg_idx = i;
