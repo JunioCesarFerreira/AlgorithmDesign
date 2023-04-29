@@ -1,0 +1,134 @@
+path length = 73
+. . . . . . . X . . . . . . . . . . O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . O O O O O . . . O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . O . . O O O . . . . . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+path length = 72
+. . . . . . . X . . . . . . . . . . O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . O O O O O . . . O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . O . . O O O . . . . . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+path length = 71
+. . . . . . . X . . . . . . . . . . O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . O O O O O . . . O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . O . . O O O . . . . . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+path length = 70
+. . . . . . . X . . . . . . . . . O O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . O O O O . . . O O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . O . . O O O . . . O . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+path length = 69
+. . . . . . . X . . . . . . . . . . O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . . O O O O . . . O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . O . . . . O . . . O . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+path length = 70
+. . . . . . . X . . . . . . . . . . O . X . . . O O O O O O O . X . . X . O O . X . . . . . . . . . 
+. . . . . . . . . . . . . . X . X . O O . . X X . O O O . O O O . . X . O O O O . . . . . . X . . . 
+. . X . . . . . . . X . O O . O . X . O O O . . O O O . X . O O O O . O O O O . X . . . X . . . . . 
+. . . . . . . X . . . . O O O O O . O O O O O O O O O O . O O O O O O O O O O . . . X . . . . X . . 
+. . . . . . . . . . . . O O O O O O O O O O O O O O O O O O O O O . O O O O . X . . . . . . . X . . 
+. . . X . . . . X . . . . . O O O O O O O O O O O O . O O O O O . X . O O . X . . . . . X . . . . . 
+. . X . . . . . . . . . . X . O O O O O O O O O O . X . O O O O O . O O O O . . . . . . . X . . . . 
+. . . . X . . . . X . X . . O O O O O O . O O O O O . O O O O O . X . O O O . . . O O O O . . O O . 
+. . X . . . . . X . O . O O O O O O O . X . O O O O O O O . O O O . O O O . X . O O O O O O O O O O 
+. . . . . . . . X . O O O O O O O O O O . O O O O O O O . X . O O O O O O O . O O O O O O O O O O . 
+. . . . . X . . . O O O . O O O O O O O . O O O O O O O O . O O O O O O O O O O O O O O O O O O . X 
+. . X . O . X . O O . . X . O O O O O . X . . O O O O O . . . O O O O O O O O O O O O O . O O O . . 
+X X . . O O . O O . X . . . . O O O O O . . X . O O O . X X X . O . . O O O O O O O O . X . O . X . 
+. . . X . O O O O O . . . X X . O O O O O O . O O . O O . . X . . X X . . . . . . . O . . . O . . . 
+O O O . . . O O O . X . X . . O O O O O O . O O . X . O O O . O O . . . . . . . . . . . . . . . X . 
+O O O . . X . O O O . O . O O O O O O O . X . O O . O O O O . O O O O . X . . . . . . . . . . . X . 
+O O . X . . O O O O O O O O O O O O O . X X . O O O O O O . X . O O O . . . . . . . . . . . . . . . 
+O O O . O O O O O O O O O O O . O O O O . . X . O O O O O O . O O O . X . . . . . . . . . . X . . . 
+O O O O O O O O O O O O O O . X . O O O O O . O O O O O . O O O O O O . . X . . . . . X . . . . . . 
+O O O O O O O O O O O O O O O . O O O O O O O O O O O . X . O O O O O O O . . . . . . . . . . . . . 
+
+Comprimento da rota = 69
+runtime: 0.002 s

@@ -1,0 +1,72 @@
+path length = 15
+. . . . . . . . . . 
+. X . . . . . . . . 
+O . . X . . . . . . 
+O O O . X . . . . . 
+O O O O . . . . . . 
+O . O O . X . . . . 
+. X . O O . O . X . 
+. . O O O O O O . . 
+. O O O O . O O O O 
+X . O O . X . O O . 
+. O O . . . . O . . 
+O O . X . . . . . . 
+
+path length = 14
+. . . . . . . . . . 
+. X . . . . . . . . 
+O . . X . . . . . . 
+O O O . X . . . . . 
+O O O O . . . . . . 
+O . O O . X . . . . 
+. X . O O . O . X . 
+. . O O O O O O . . 
+. O O O O . O O O O 
+X . O O . X . O O . 
+. O O . . . . O . . 
+O O . X . . . . . . 
+
+path length = 13
+. . . . . . . . . . 
+. X . . . . . . . . 
+O . . X . . . . . . 
+O O O . X . . . . . 
+O O O O . . . . . . 
+O . O O . X . . . . 
+. X . O O . O . X . 
+. . O O O O O O . . 
+. O O O O . O O O O 
+X . O O . X . O O . 
+. O O . . . . O . . 
+O O . X . . . . . . 
+
+path length = 14
+. . . . . . . . . . 
+. X . . . . . . . . 
+O . . X . . . . . . 
+O O O . X . . . . . 
+O O O O . . . . . . 
+O . O O . X . . . . 
+. X . O O . O . X . 
+. . O O O O O O . . 
+. O O O O . O O O O 
+X . O O . X . O O . 
+. O O . . . . O . . 
+O O . X . . . . . . 
+
+path length = 14
+. . . . . . . . . . 
+. X . . . . . . . . 
+. . . X . . . . . . 
+O O O . X . . . . . 
+O O O O . . . . . . 
+O . O O . X . . . . 
+. X . O O . O . X . 
+. . O O O O O O . . 
+. O O O O . O O O O 
+X . O O . X . O O . 
+. O O . . . . O . . 
+O O . X . . . . . . 
+
+Comprimento da rota = 13
+runtime: 0.001 s
