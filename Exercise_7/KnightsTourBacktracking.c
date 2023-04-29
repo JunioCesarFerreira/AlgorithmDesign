@@ -118,11 +118,12 @@ void printMatrix(int board[N][N])
     }
 }
   
+// knightsTour complexity time O(8^N)
 int main()
 {
     clock_t start_time = clock();
     int board[N][N];
-	int sol[N][N];
+    int sol[N][N];
 
 #ifdef WARNSDORFF_HEURISTIC
     printf("Passeio do cavalo com heuristica de Warnsdorff (N=%d).\n", N);
@@ -147,23 +148,23 @@ int main()
             if (knightsTour(x_start, y_start, 1, board) == 0) 
             {
                 printf(" -> Solution does not exist.\n");
-				sol[x_start][y_start] = 0;
+                sol[x_start][y_start] = 0;
             }
             else
             {
                 printf(" -> Solution:\n\n");
-				sol[x_start][y_start] = 1;
+                sol[x_start][y_start] = 1;
                 printMatrix(board);
             }
             printf("\n");
         }
     }
-	
+    
     printMatrix(sol);
 
     clock_t end_time = clock();
     double interval = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("\n\nruntime: %.3lf s\n", interval);
-	 
+     
     return 0;
 }

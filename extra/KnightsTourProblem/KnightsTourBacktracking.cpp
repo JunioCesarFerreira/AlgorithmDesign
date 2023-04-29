@@ -10,7 +10,7 @@ const int moveY[8] = {-2, -1, 1, 2, 2, 1, -1, -2};
 void printBoard(const vector<vector<int>>& board) 
 {
     for (int i = 0; i < N; ++i) 
-	{
+    {
         for (int j = 0; j < N; ++j) 
             cout << board[i][j] << " ";
         cout << endl;
@@ -27,12 +27,12 @@ bool solveKnightTour(int x, int y, int move, vector<vector<int>>& board)
     if (move == N * N) return true;
 
     for (int i = 0; i < 8; ++i) 
-	{
+    {
         int nextX = x + moveX[i];
         int nextY = y + moveY[i];
 
         if (isValidMove(nextX, nextY, board)) 
-		{
+        {
             board[nextX][nextY] = move;
             if (solveKnightTour(nextX, nextY, move + 1, board))
                 return true;
@@ -52,12 +52,12 @@ int main()
 
     board[startX][startY] = 0;
     if (solveKnightTour(startX, startY, 1, board)) 
-	{
+    {
         cout << "Solução encontrada:" << endl;
         printBoard(board);
     } 
-	else 
-	{
+    else 
+    {
         cout << "Nenhuma solução encontrada." << endl;
     }
 

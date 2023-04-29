@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 #define INPUTS_MAX_SIZE  50
 #define PATH_BUFFER_SIZE INPUTS_MAX_SIZE*INPUTS_MAX_SIZE
@@ -9,14 +11,7 @@
 //#define DEBUG_BENCHMARK_TIME // Medindo tempo de execução do programa.
 //#define DEBUG_PATH_VIEW // Brincadeira de observar as tentativas.
 //#define DEBUG_FIELD_VIEW // Visualizar o campo minado com . nas células safe e X nas boom.
-
-#ifdef DEBUG_BENCHMARK_TIME
-#include <time.h>
-#endif
-
-#ifdef DEBUG_PATH_VIEW
-#include <stdlib.h>
-#endif
+#define DEBUG_VIEW_MIN_PATH
 
 typedef struct
 {
@@ -218,21 +213,20 @@ void find_min_path(minefield_t* mf, int row, int col, int path_length, int* min_
             printPath(path_scope);
             printf("min = %d\n", *min_path_length);
 #endif
-#ifdef DEBUG_PATH_VIEW
-    system("cls");
-    printf("path length = %d\n", path_length);
-    for (int i=0; i < mf->rows_size; i++)
-    {
-        for (int j=0; j < mf->cols_size; j++)
+#ifdef DEBUG_VIEW_MIN_PATH
+        printf("path length = %d\n", path_length);
+        for (int i=0; i < mf->rows_size; i++)
         {
-            char ch = '.';
-            if (mf->field[i][j]==0) ch = 'X';
-            else if (mf->field[i][j]==2) ch = 'O';
-            printf("%c ", ch);
+            for (int j=0; j < mf->cols_size; j++)
+            {
+                char ch = '.';
+                if (mf->field[i][j]==0) ch = 'X';
+                else if (mf->field[i][j]==2) ch = 'O';
+                printf("%c ", ch);
+            }
+            printf("\n");
         }
         printf("\n");
-    }
-    printf("\n");
 #endif
         }
         return;
@@ -372,7 +366,7 @@ int main()
         {
             mf.field[row][0] = 2;
 
-            find_min_path(&mf, row, 0, 1, &min_path_length);
+            find_min_path(&mf, row, 0, 0, &min_path_length);
             
             mf.field[row][0] = 1;
         }
@@ -380,7 +374,7 @@ int main()
 
     if (min_path_length < mf.cols_size*mf.rows_size)
     {
-        printf("Comprimento da rota = %d\n", min_path_length-1);
+        printf("Comprimento da rota = %d\n", min_path_length);
     }
     else
     {
@@ -391,8 +385,8 @@ int main()
 
 #ifdef DEBUG_BENCHMARK_TIME
     clock_t end_time = clock();
-    double interval = (double)(end_time - start_time) / CLOCKS_PER_SEC * 1000.0;
-    printf("runtime: %.3lf ms\n", interval);
+    double interval = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("runtime: %.3lf s\n", interval);
 #endif
     return 0;
 }
