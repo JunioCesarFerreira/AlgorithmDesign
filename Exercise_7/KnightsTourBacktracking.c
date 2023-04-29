@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <time.h>
 
-#define N 6 // Dimensão do tabuleiro.
+#define N 8 // Dimensão do tabuleiro.
 
 #define INVERSE_MOVE // Utilizando apenas backtracking a ordem de escolha dos movimentos gera soluções diferentes.
-//#define WARNSDORFF_HEURISTIC // Habilita uso da heurística de Warnsdorf.
+#define WARNSDORFF_HEURISTIC // Habilita uso da heurística de Warnsdorf.
 
 #define M 8 // Quantidade fixa de possíveis movimentos.
 
@@ -162,8 +162,8 @@ int main()
     printMatrix(sol);
 
     clock_t end_time = clock();
-    double interval = (double)(end_time - start_time) / CLOCKS_PER_SEC * 1000.0;
-    printf("\n\nruntime: %.3lf ms\n", interval);
+    double interval = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("\n\nruntime: %.3lf s\n", interval);
 	 
     return 0;
 }

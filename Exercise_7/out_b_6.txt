@@ -331,4 +331,4 @@ start position (5, 5) -> Solution:
   1   1   1   1   1   1 
 
 
-runtime: 417505.000 ms
+runtime: 417.505 s
