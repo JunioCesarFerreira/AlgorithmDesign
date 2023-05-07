@@ -174,11 +174,13 @@ int main()
     interval = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("\tresult: fn=%lu\n", fn);
     printf("\truntime: %.3lf s\n", interval);
+
     return 0;
 }
 
 /* 
-Result (on Core i7 10th gen 16G)
+Results on Core i7 10th gen 8G:
+----------------------------------------
 Fibonacci: n=50
 Fibonacci recursive
         result: fn=3185141890
@@ -192,6 +194,7 @@ Fibonacci DP Bottom-Up
 Fibonacci matrix
         result: fn=3185141890
         runtime: 0.000 s
+----------------------------------------
 */
 
 /*
