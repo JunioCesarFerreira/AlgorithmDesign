@@ -33,7 +33,7 @@ int main()
         }
     }
 
-    printf("%d\n", dp[n][x]);
+    printf("%d", dp[n][x]);
 
     return 0;
 }
