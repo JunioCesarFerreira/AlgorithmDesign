@@ -3,11 +3,12 @@
 #define N 1000
 #define MAX(a, b) (a > b ? a : b)
 
+int h[N], s[N];
+int dp[N + 1][N + 1];
+
 int main() 
 {
     int n, x;
-    int h[N], s[N];
-    int dp[N + 1][N + 1];
 
     scanf("%d %d", &n, &x);
 

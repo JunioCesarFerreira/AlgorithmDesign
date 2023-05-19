@@ -27,7 +27,6 @@ int main()
         getchar();
     }
 
-
 #ifdef DEBUG_THIS
     printf("n = %d\ngrid:\n", n);
     for (int i = 0; i < n; i++)
