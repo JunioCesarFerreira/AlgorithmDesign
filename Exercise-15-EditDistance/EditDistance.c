@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
+//#define DEBUG_DP
+
 #define MAX(a,b) (a > b ? a : b)
 #define MIN(a,b) (a < b ? a : b)
 #define MIN3(a,b,c) MIN(a, MIN(b,c))
 
 #define MAX_LENGTH 5003 // Max length 5000
-//#define DEBUG_DP
 
-char string1[MAX_LENGTH];
-char string2[MAX_LENGTH];
+char str1[MAX_LENGTH];
+char str2[MAX_LENGTH];
 
 int dp[MAX_LENGTH][MAX_LENGTH];
 
@@ -19,7 +20,7 @@ int levRec(int i, int j)
     if (i==0) return j;
     if (j==0) return i;
 
-    if (string1[i-1]==string2[j-1])
+    if (str1[i-1]==str2[j-1])
         return levRec(i-1,j-1);
     
     return 1 + MIN3(levRec(i-1,j), levRec(i,j-1), levRec(i-1,j-1));
@@ -36,7 +37,7 @@ int levDpRec(int i, int j)
         else if (j==0) 
             dp[i][0] = i;
 
-        else if (string1[i-1]==string2[j-1])
+        else if (str1[i-1]==str2[j-1])
             dp[i][j] = levDpRec(i-1,j-1);
 
         else
@@ -58,7 +59,7 @@ int levDpIt(int m, int n)
             else if (j==0) 
                 dp[i][0] = i;
 
-            else if (string1[i-1]==string2[j-1])
+            else if (str1[i-1]==str2[j-1])
                 dp[i][j] = dp[i-1][j-1];
 
             else
@@ -73,11 +74,14 @@ int main()
     int lev_dist;
     int len1, len2;
 
-    fgets(string1, sizeof(string1), stdin);
-    fgets(string2, sizeof(string2), stdin);
+    fgets(str1, sizeof(str1), stdin);
+    fgets(str2, sizeof(str2), stdin);
+    
+    str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
 
-    len1 = strlen(string1);
-    len2 = strlen(string2);
+    len1 = strlen(str1);
+    len2 = strlen(str2);
 
     for (int i=0; i<=len1; i++)
         for (int j=0; j<=len2; j++)
