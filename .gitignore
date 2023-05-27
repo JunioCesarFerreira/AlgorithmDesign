@@ -1,1 +1,6 @@
 ﻿*.exe
+extraC#/ConsoleAppGraph/obj/Debug/ConsoleAppGraph.csproj.FileListAbsolute.txt
+*.cache
+*.suo
+extraC#/ConsoleAppGraph/bin/Debug/ConsoleAppGraph.exe.config
+*.pdb
