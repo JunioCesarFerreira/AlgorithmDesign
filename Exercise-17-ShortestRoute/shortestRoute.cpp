@@ -24,6 +24,24 @@ class Graph
 
         void addEdge(int u, int v, int weight) 
         {
+            // Verifica se a aresta já existe
+            for (auto& edge : adj[u]) 
+            {
+                if (edge.first == v)
+                {
+                    if (edge.second > weight)
+                    {
+                        edge.second = weight;
+                        for (auto& e : adj[v]) 
+                            if (e.first == u)
+                            {
+                                e.second = weight;
+                                break;
+                            }
+                    }
+                    return; 
+                }
+            }
             adj[u].emplace_back(make_pair(v, weight));
             adj[v].emplace_back(make_pair(u, weight));
         }
@@ -42,18 +60,17 @@ class Graph
                 int64_t dist_u = pq.top().first;
                 pq.pop();
 
-                if (dist_u > distances[u])
-                    continue;
+                if (dist_u > distances[u]) continue;
 
                 for (auto& edge : adj[u]) 
                 {
                     int v = edge.first;
                     int weight = edge.second;
-                    int64_t tmpSum = distances[u] + weight;
+                    int64_t new_dist = distances[u] + weight;
 
-                    if (distances[v] > tmpSum) 
+                    if (distances[v] > new_dist) 
                     {
-                        distances[v] = tmpSum;
+                        distances[v] = new_dist;
                         pq.push(make_pair(distances[v], v));
                     }
                 }
@@ -65,9 +82,7 @@ class Graph
         void preprocess()
         {
             for (int v=0; v < num_vertices; v++)
-            {
                 distance_vertices[v] = dijkstra(v);
-            }
         }
 
         long long int dist(int u, int v)
