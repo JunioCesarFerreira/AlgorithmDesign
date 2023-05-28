@@ -4,13 +4,12 @@
 
 using namespace std;
 
-#define INFINITY 18446744073709551615u
-
 typedef pair<uint32_t, uint32_t> intPair;
 
 class Graph 
 {
     private:
+        const uint64_t infinity = 18446744073709551615u;
         int num_vertices;
         vector<vector<intPair>> adj;
 
@@ -29,7 +28,7 @@ class Graph
 
         vector<uint64_t> dijkstra(int start) 
         {
-            vector<uint64_t> distance(num_vertices, INFINITY);
+            vector<uint64_t> distance(num_vertices, infinity);
 
             priority_queue<intPair, vector<intPair>, greater<intPair>> pq;
             pq.push(make_pair(0, start));
@@ -38,12 +37,16 @@ class Graph
             while (!pq.empty()) 
             {
                 int u = pq.top().second;
+                uint64_t dist_u = pq.top().first;
                 pq.pop();
 
-                for (auto it = adj[u].begin(); it != adj[u].end(); ++it) 
+                if (dist_u > distance[u])
+                    continue;
+
+                for (auto& edge : adj[u]) 
                 {
-                    int v = (*it).first;
-                    int weight = (*it).second;
+                    int v = edge.first;
+                    auto weight = edge.second;
 
                     if (distance[v] > distance[u] + weight) 
                     {
@@ -56,10 +59,13 @@ class Graph
             return distance;
         }
 
-        uint64_t dist(intPair query)
+        int64_t dist(intPair query)
         {
             vector<uint64_t> d = dijkstra(query.first);
-            return d[query.second];
+            if (d[query.second] == infinity)
+                return -1;
+            else
+                return d[query.second];
         }
 
         void printAdjList()
@@ -112,11 +118,8 @@ int main(int argc, char const *argv[])
 #else
 
     for (int i=0; i<q; i++)
-    {
-        uint64_t d = graph.dist(queries[i]);
-        printf("%lld\n", d==INFINITY ? -1 : d);
-    }
-
+        printf("%lld\n", graph.dist(queries[i]));
+        
 #endif
 
 	return 0;
