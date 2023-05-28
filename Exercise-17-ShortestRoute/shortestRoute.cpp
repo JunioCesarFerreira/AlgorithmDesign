@@ -4,83 +4,82 @@
 
 using namespace std;
 
-typedef pair<uint32_t, uint32_t> intPair;
+typedef pair<int, int> intPair;
 
 class Graph 
 {
     private:
-        const uint64_t infinity = 18446744073709551615u;
+        const static int max_vertices = 500;
+        const int64_t infinity = 9223372036854775807;//18446744073709551615u;
         int num_vertices;
-        vector<vector<intPair>> adj;
+        vector<intPair> adj[max_vertices];
+        vector<vector<int64_t>> distance_vertices;
 
     public:
         Graph(int numVertices) 
         {
             num_vertices = numVertices;
-            adj.resize(numVertices);
+            distance_vertices.resize(num_vertices);
         }
 
-        void addEdge(uint32_t u, uint32_t v, uint32_t weight) 
+        void addEdge(int u, int v, int weight) 
         {
-            adj[u].push_back(make_pair(v, weight));
-            adj[v].push_back(make_pair(u, weight));
+            adj[u].emplace_back(make_pair(v, weight));
+            adj[v].emplace_back(make_pair(u, weight));
         }
 
-        vector<uint64_t> dijkstra(int start) 
+        vector<int64_t> dijkstra(int start) 
         {
-            vector<uint64_t> distance(num_vertices, infinity);
+            vector<int64_t> distances(num_vertices, infinity);
 
             priority_queue<intPair, vector<intPair>, greater<intPair>> pq;
             pq.push(make_pair(0, start));
-            distance[start] = 0;
+            distances[start] = 0;
 
             while (!pq.empty()) 
             {
                 int u = pq.top().second;
-                uint64_t dist_u = pq.top().first;
+                int64_t dist_u = pq.top().first;
                 pq.pop();
 
-                if (dist_u > distance[u])
+                if (dist_u > distances[u])
                     continue;
 
                 for (auto& edge : adj[u]) 
                 {
                     int v = edge.first;
-                    auto weight = edge.second;
+                    int weight = edge.second;
+                    int64_t tmpSum = distances[u] + weight;
 
-                    if (distance[v] > distance[u] + weight) 
+                    if (distances[v] > tmpSum) 
                     {
-                        distance[v] = distance[u] + weight;
-                        pq.push(make_pair(distance[v], v));
+                        distances[v] = tmpSum;
+                        pq.push(make_pair(distances[v], v));
                     }
                 }
             }
 
-            return distance;
+            return distances;
         }
 
-        int64_t dist(intPair query)
+        void preprocess()
         {
-            vector<uint64_t> d = dijkstra(query.first);
-            if (d[query.second] == infinity)
+            for (int v=0; v < num_vertices; v++)
+            {
+                distance_vertices[v] = dijkstra(v);
+            }
+        }
+
+        long long int dist(int u, int v)
+        {
+            if (distance_vertices[u][v]==infinity)
                 return -1;
             else
-                return d[query.second];
-        }
-
-        void printAdjList()
-        {
-	        for (int u = 0; u < num_vertices; ++u)
-            {
-		        printf("%d", u);
-		        for (auto v : adj[u]) 
-			        printf(" -> (%2d, %2d)", v.first, v.second);
-		        printf("\n");
-	        }
+                return distance_vertices[u][v];
         }
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
 	int n, m, q;
     cin >> n >> m >> q;
@@ -93,35 +92,13 @@ int main(int argc, char const *argv[])
         graph.addEdge(u-1, v-1, w);
 	}
     
-    vector<intPair> queries;
+    graph.preprocess();
+
     for (int i=0; i<q; i++)
     {
         cin >> u >> v;
-        queries.push_back(make_pair(u-1,v-1));
+        printf("%lld\n", graph.dist(u-1,v-1));
     }
-
-#ifdef DEBUG
-
-	graph.printAdjList(); 
-    for (auto p : queries)
-        printf("query: %d %d\n", p.first, p.second);
-
-    for (auto query : queries)
-    {
-        vector<int> dist = graph.dijkstra(query.first);
-        printf("dist(%d, %d) = %d\n", query.first, query.second, dist[query.second]);
-        for (auto d : dist)
-            printf("%d ", d);
-        printf("\n");
-    }
-
-#else
-
-    for (int i=0; i<q; i++)
-        printf("%lld\n", graph.dist(queries[i]));
-        
-#endif
 
 	return 0;
 }
-
