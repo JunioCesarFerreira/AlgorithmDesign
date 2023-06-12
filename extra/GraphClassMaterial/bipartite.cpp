@@ -13,10 +13,10 @@ using namespace std;
 // usando STL para representar grafos
 
 // o par.first -> vértice u, par.second -> peso da aresta
-typedef pair<int, int> ii;   
+typedef pair<int, int> intPair;   
 
 // um vetor de pares
-typedef vector<ii> vii;
+typedef vector<intPair> vii;
 
 // vetor apenas. uso genérico... marcar visitados, etc..
 typedef vector<int> vi;
@@ -57,7 +57,7 @@ bool bipartite(int u){
 
 		for (int i = 0; i < adj_list[k].size(); ++i) // para todos adj v de k
 		{
-			ii v = adj_list[k][i]; // aqui v é um par...
+			intPair v = adj_list[k][i]; // aqui v é um par...
 			if (cor[v.first] == SEMCOR){
 				cor[v.first] = 1-cor[k];
 				q.push(v.first);

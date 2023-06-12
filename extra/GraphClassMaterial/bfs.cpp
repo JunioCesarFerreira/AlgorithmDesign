@@ -11,10 +11,10 @@ using namespace std;
 int AdjMat[200][200];
 
 // par de inteiros: guarda o vertice v e o peso da aresta
-typedef pair<int,int> ii;
+typedef pair<int,int> intPair;
 
 // todos os vertices v adjacentes a u 
-typedef vector<ii> vii;
+typedef vector<intPair> vii;
 
 // lista de adjacencia para todo vertice u do meu grafo..
 vector<vii> adj_list(200);
@@ -32,7 +32,7 @@ void printAdjList(){
 	for (int u = 0; u < nv; ++u){ // para todo vertice u
 		printf("%d -> ", u);
 		for (int i = 0; i < adj_list[u].size(); ++i) { // para todo adjacente v de u
-			ii v = adj_list[u][i];
+			intPair v = adj_list[u][i];
 			printf("(%d, %d) -> ", v.first, v.second);
 		}
 		printf("\n");
@@ -51,7 +51,7 @@ void bfs(int u){
 		printf("%d ", k+1);
 
 		for (int i = 0; i < adj_list[k].size(); ++i) { // para todo adjacente v de u
-			ii v = adj_list[k][i];
+			intPair v = adj_list[k][i];
 			if (vis[v.first] == INF){
 				vis[v.first] = vis[k] + 1;  // o nivel do adj v eh o do pai k + 1
 				q.push(v.first);  // coloca o adj na fila...

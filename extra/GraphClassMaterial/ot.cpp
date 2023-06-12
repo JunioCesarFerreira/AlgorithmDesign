@@ -12,10 +12,10 @@ using namespace std;
 // usando STL para representar grafos
 
 // o par.first -> vértice u, par.second -> peso da aresta
-typedef pair<int, int> ii;   
+typedef pair<int, int> intPair;   
 
 // um vetor de pares
-typedef vector<ii> vii;
+typedef vector<intPair> vii;
 
 // vetor apenas. uso genérico... marcar visitados, etc..
 typedef vector<int> vi;
@@ -52,7 +52,7 @@ void ordtopRec(int u){
 
 	for (int i = 0; i < adj_list[u].size(); ++i) // para todos adj v de u
 	{
-		ii v = adj_list[u][i]; // aqui v é um par...
+		intPair v = adj_list[u][i]; // aqui v é um par...
 		if (vertices[v.first] == NAOVISITADO)
 			ordtopRec(v.first);
 	}
