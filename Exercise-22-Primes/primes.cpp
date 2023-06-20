@@ -5,17 +5,19 @@ using namespace std;
 
 typedef pair<int, int> intPair;
     
-bitset<2147483648U> isPrime;
+#define BLOCK 10000000
+#define SIZE  128    
+bitset<10000001> isPrime[SIZE];
 
 void sieveOfEratosthenes(int max) 
 {
-    for (uint32_t i = 2; i * i <= (uint32_t)max; ++i) 
+    for (int i = 2; i * i <= max; ++i) 
     {
-        if (isPrime[i])
+        if (isPrime[i/BLOCK][i%BLOCK])
         {
-            for (uint32_t j = i * i; j <= (uint32_t)max; j += i) 
+            for (int j = i * i; j <= max; j += i) 
             {
-                isPrime[j] = false;
+                isPrime[j/BLOCK][j%BLOCK] = false;
             }
         }
     }
@@ -28,9 +30,9 @@ intPair findClosestAdjacentPrimes(int L, int U)
     int minDistance = U - L + 1;
     int prevPrime = -1;
 
-    for (uint32_t i = L; i <= (uint32_t)U; ++i) 
+    for (int i = L; i <= U; ++i) 
     {
-        if (isPrime[i]) 
+        if (isPrime[i/BLOCK][i%BLOCK]) 
         {
             if (prevPrime != -1) 
             {
@@ -55,9 +57,9 @@ intPair findMostDistantAdjacentPrimes(int L, int U)
     int maxDistance = 0;
     int prevPrime = -1;
 
-    for (uint32_t i = L; i <= (uint32_t)U; ++i) 
+    for (int i = L; i <= U; ++i) 
     {
-        if (isPrime[i]) 
+        if (isPrime[i/BLOCK][i%BLOCK]) 
         {
             if (prevPrime != -1) 
             {
@@ -80,9 +82,11 @@ int main()
     int L, U;
     intPair closestPrimes, distantPrimes;
 
-    isPrime.set();
-    isPrime[0] = false;
-    isPrime[1] = false;
+    for (int i=0; i<SIZE; i++)
+        isPrime[i].set();
+
+    isPrime[0][0] = false;
+    isPrime[0][1] = false;
 
     while (cin >> L >> U) 
     {
