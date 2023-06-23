@@ -5,20 +5,18 @@ using namespace std;
 
 typedef pair<int, int> intPair;
     
-#define BLOCK 10000000
-#define SIZE  128    
-bitset<10000001> isPrime[SIZE];
+bitset<10000001> isPrime;
 
-void sieveOfEratosthenes(int max) 
+void sieveOfEratosthenes(int L, int U)
 {
-    for (int i = 2; i * i <= max; ++i) 
+    isPrime.set();
+    if (L==1) isPrime[0] = false; 
+    for (uint32_t i = 2; i*i <= (uint32_t)U; ++i)
     {
-        if (isPrime[i/BLOCK][i%BLOCK])
+        uint32_t j = max(i * i, ((uint32_t)L + i - 1) / i * i);
+        for ( ; j <= (uint32_t)U; j += i)
         {
-            for (int j = i * i; j <= max; j += i) 
-            {
-                isPrime[j/BLOCK][j%BLOCK] = false;
-            }
+            isPrime[j-L] = false;
         }
     }
 }
@@ -28,23 +26,25 @@ intPair findClosestAdjacentPrimes(int L, int U)
     intPair closestPrimes = make_pair(0, 0);
 
     int minDistance = U - L + 1;
+    int lim = minDistance;
     int prevPrime = -1;
 
-    for (int i = L; i <= U; ++i) 
+    for (int i = 0; i < lim; ++i) 
     {
-        if (isPrime[i/BLOCK][i%BLOCK]) 
+        if (isPrime[i]) 
         {
+            int S = L + i;
             if (prevPrime != -1) 
             {
-                int dist =  i - prevPrime;
+                int dist =  S - prevPrime;
                 if (dist < minDistance)
                 {
                     minDistance = dist;
-                    closestPrimes = make_pair(prevPrime, i);
+                    closestPrimes = make_pair(prevPrime, S);
                 }
             }
 
-            prevPrime = i;
+            prevPrime = S;
         }
     }
 
@@ -56,21 +56,23 @@ intPair findMostDistantAdjacentPrimes(int L, int U)
     intPair distantPrimes = make_pair(0, 0);
     int maxDistance = 0;
     int prevPrime = -1;
+    int lim = U - L;
 
-    for (int i = L; i <= U; ++i) 
+    for (int i = 0; i <= lim; ++i) 
     {
-        if (isPrime[i/BLOCK][i%BLOCK]) 
+        if (isPrime[i]) 
         {
+            int S = L + i;
             if (prevPrime != -1) 
             {
-                int dist = i - prevPrime;
+                int dist = S - prevPrime;
                 if (dist > maxDistance)
                 {
                     maxDistance = dist;
-                    distantPrimes = make_pair(prevPrime, i);
+                    distantPrimes = make_pair(prevPrime, S);
                 }
             }
-            prevPrime = i;
+            prevPrime = S;
         }
     }
 
@@ -82,12 +84,6 @@ int main()
     int L, U;
     intPair closestPrimes, distantPrimes;
 
-    for (int i=0; i<SIZE; i++)
-        isPrime[i].set();
-
-    isPrime[0][0] = false;
-    isPrime[0][1] = false;
-
     while (cin >> L >> U) 
     {
         closestPrimes.first=0;
@@ -95,7 +91,7 @@ int main()
 
         if (U > L)
         {
-            sieveOfEratosthenes(U);
+            sieveOfEratosthenes(L, U);
             closestPrimes = findClosestAdjacentPrimes(L, U);
             distantPrimes = findMostDistantAdjacentPrimes(L, U);
         }
