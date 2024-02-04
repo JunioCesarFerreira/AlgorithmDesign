@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#define DEBUG_THIS
-
 int main()
 {
     int amount_test;
@@ -17,9 +15,9 @@ int main()
 
         cin >> N;
 
-        vector<int> T(N);
-        vector<int> S(N);
-        vector<int> p(N);
+        vector<int> T(N); // time in days to finish the job
+        vector<int> S(N); // payment of late fine
+        vector<int> p(N); // permutation
 
         for (int i=0; i<N; i++)
         {
