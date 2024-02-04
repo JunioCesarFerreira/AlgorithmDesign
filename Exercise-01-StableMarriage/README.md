@@ -9,7 +9,7 @@ São dados $n$ homens e $n$ mulheres. Cada mulher classifica todos os homens em 
 Podemos formular o problema pela seguinte função: $F:\mathbb{R}^N\times\mathbb{R}^N\times S_N\rightarrow\mathbb{R}$ onde $N\in\mathbb{Z}_+$ e $S_N$ é o conjunto das permutações de dimensão $N$. Definimos a função $F$ por:
 
 $$ 
-F(x,y,\sigma):=\sum_{i=1}^{N} x_{\sigma(i)}
+F(x,y,\sigma):=\sum_{i=1}^{N} x_{\sigma(i)}\Bigg(\sum_{j=1}^{i}y_{\sigma(i)}\Bigg)
 $$
 
 T
