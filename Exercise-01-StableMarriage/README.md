@@ -51,3 +51,9 @@ $$
 $$
 
 concluimos que $F(x,y,\sigma)-F(x,y,\gamma)\le 0$ contradizeno a hipótese inicial.
+
+Assim, concluímos que o problema sempre tem pelo menos uma solução.
+
+## Sobre as soluções
+
+Neste diretório apresentamos algumas soluções desenvolvidas de forma intuitiva e uma solução encontrada na internet (veja o subdiretório `Extra`). Além disso, elaboramos um verificador de soluções (veja o código `CheckStability.cpp`). A solução apresentada em `StableMarriage.cpp` foi a que obteve melhor desempenho nos testes realizados com as entradas apresentadas em `TestCase`.
