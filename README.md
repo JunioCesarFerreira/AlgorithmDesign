@@ -2,6 +2,30 @@
 
 Exercícios resolvidos de uma disciplina de Projetos de Algoritimos no ano de 2023.
 
+## Como Usar
+
+Toda solução possui um `exe` previamente compilado com `gcc`. Para compilar novas versões em seu ambiente, instale o `gcc` compilador de `C/C++` e execute o seguinte prompt:
+
+```shell
+gcc -o prog_name ./path/code.cpp
+```
+
+Todo problema possui um diretório de `TestCase` neste estão alguns casos de testes com suas entradas e saídas esperadas, por exemplo, para executar a caso 1 faça:
+
+```shell
+./prog_name < TestCase/1.in
+```
+
+Caso queira registrar a saída em arquivo utilize por exemplo:
+
+```shell
+./prog_name < TestCase/1.in > result1.out
+```
+
+**Observação**:
+No Windows utilize o MSYS2 MINGW64 para executar os comandos acima.
+
+
 ## Exercícios
 
 ### "Exercise-01-StableMarriage"
