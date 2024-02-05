@@ -1,31 +1,61 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
-int main() 
-{
+int findClosest(int age, const vector<int>& S, vector<bool>& used) {
+    int minDiff = INT_MAX;
+    int closest = -1;
+    for (int i = 0; i < S.size(); i++) {
+        if (!used[i]) {
+            int diff = abs(S[i] - age);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closest = i;
+            }
+        }
+    }
+    return closest;
+}
+
+int main() {
     int cases = 0;
     int n, m;
-    int B[10000], S[10000];
-
-    while (scanf("%d %d", &n, &m) == 2) 
-    {
+    while (cin >> n >> m) {
         if (n == 0 && m == 0) break;
 
-        int mn = 0xfffffff, i;
+        vector<int> B(n), S(m);
+        vector<bool> used(m, false);
+        int minB = INT_MAX;
 
-        for(i = 0; i < n; i++)
-        {
-            scanf("%d", B+i);
-            mn = min(mn, B[i]);
+        for (int& b : B) {
+            cin >> b;
+            minB = min(minB, b);
+        }
+        for (int& s : S) {
+            cin >> s;
         }
 
-        for(i = 0; i < m; i++) scanf("%d", S+i);
+        sort(B.begin(), B.end());
+        sort(S.begin(), S.end());
 
-        if(n <= m) printf("Case %d: 0\n", ++cases);
-        else printf("Case %d: %d %d\n", ++cases, n-m, mn);
+        for (int b : B) {
+            int closest = findClosest(b, S, used);
+            if (closest != -1) {
+                used[closest] = true;
+            }
+        }
+
+        int bachelorsLeft = n;
+        for (bool u : used) {
+            if (u) bachelorsLeft--;
+        }
+
+        cout << "Case " << ++cases << ": ";
+        if (bachelorsLeft > 0) cout << bachelorsLeft << " " << minB << endl;
+        else cout << "0" << endl;
     }
-
     return 0;
 }
