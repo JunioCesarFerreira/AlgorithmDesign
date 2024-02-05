@@ -137,3 +137,22 @@ Este exercício envolve a navegação através de um "Campo Minado", representad
 A solução em `minefield.c` explora a técnica de backtracking.
 
 ---
+
+### "Exercise-07-KnightsTourBacktracking"
+
+**Título do Exercício:** Passeio do Cavalo com Backtracking
+
+**Descrição do Problema:**
+Este exercício apresenta o clássico problema do "Passeio do Cavalo" em um tabuleiro de xadrez, onde o objetivo é mover um cavalo para cada casa do tabuleiro uma única vez. A abordagem utilizada para solução é o backtracking, uma técnica algorítmica para encontrar todas as soluções possíveis ao problema, voltando atrás em decisões anteriores caso elas levem a um beco sem saída.
+
+**Conteúdo do Diretório:**
+- `KnightsTourBacktracking.c`: Código-fonte em C que implementa a solução de backtracking para o Passeio do Cavalo.
+- `README.md`: Relatório entregue como parte do exercício.
+- Arquivos executáveis e arquivos de texto com resultados ou revisões.
+
+**Nota:** Maiores detalhes sobre este problema podem ser vistos em [KnightsTourProblem](https://github.com/JunioCesarFerreira/AlgorithmDesignAnalysis/tree/main/KnightsTourProblem)
+
+**Abordagem da Solução:**
+A solução em `KnightsTourBacktracking.c` utiliza backtracking para explorar sistematicamente todas as possíveis movimentações do cavalo no tabuleiro. O algoritmo deve ser capaz de identificar quando uma rota específica não pode mais ser seguida e retroceder para explorar diferentes caminhos até cobrir todo o tabuleiro.
+
+---
