@@ -118,3 +118,22 @@ O desafio deste exercício é encontrar o maior número inteiro possível a part
 A solução em `HigherNumber.c` utiliza backtracking. A lógica do programa deve considerar todas as possíveis trocas dentro do limite de K para chegar ao resultado desejado.
 
 ---
+
+### "Exercise-06-Minefield"
+
+**Título do Exercício:** Campo Minado
+
+**Descrição do Problema:**
+Este exercício envolve a navegação através de um "Campo Minado", representado por uma matriz retangular com L linhas e C colunas. As minas estão posicionadas aleatoriamente na matriz. O desafio é calcular a menor rota possível de uma célula da primeira coluna até uma célula da última coluna, evitando as minas. Existe a possibilidade de que, devido à alta densidade de minas, não haja um caminho seguro até o destino.
+
+**Conteúdo do Diretório:**
+- `minefield.c`: Código-fonte em C que implementa a backtracking para encontrar o menor caminho no campo minado.
+- `minas.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `testPerformance.py`: Script Python para testar o desempenho da solução.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos executáveis, casos de teste e imagens adicionais.
+
+**Abordagem da Solução:**
+A solução em `minefield.c` explora a técnica de backtracking.
+
+---
