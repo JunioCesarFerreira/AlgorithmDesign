@@ -64,3 +64,21 @@ Este exercício apresenta o problema de um sapateiro que tem uma série de traba
 A solução utiliza algoritmos de ordenação para sequenciar trabalhos, minimizando as multas totais ao ponderar o tempo necessário e as multas por atraso.
 
 ---
+
+### "Exercise-03-BachelorMachMaking"
+
+**Título do Exercício:** Casamenteiros Profissionais (Bachelor MatchMaking)
+
+**Descrição do Problema:**
+O problema "BachelorMachMaking" apresenta um cenário onde, de acordo com uma lei fictícia, solteiros e solteiras de uma comunidade devem se casar com a pessoa do sexo oposto cuja idade é mais próxima da sua, seguindo a ordem de senioridade dos solteiros. O objetivo é determinar o número de solteiros que permanecem solteiros após todos os casamentos possíveis terem sido realizados conforme a lei, e a idade do solteiro mais jovem restante, se houver algum.
+
+**Conteúdo do Diretório:**
+- `BachelorMachMaking.c` e `BachelorMachMaking.cpp`: Códigos-fonte em C e C++ de implementação de uma solução para o problema proposto.
+- `BachelorMachMaking.pdf`: Documento descrevendo o cenário do exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste adicionais.
+
+**Abordagem da Solução:**
+A solução consiste na elaboração e implementação de um Algoritmo Guloso.
+
+---
