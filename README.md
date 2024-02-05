@@ -1,6 +1,6 @@
 # Algorithm Design
 
-Exercícios resolvidos de uma disciplina de Projetos de Algoritimos no ano de 2023.
+Soluções de exercícios resolvidos na disciplina Projetos de Algoritimos cursada no primeiro semestre de 2023.
 
 ## Como Usar
 
