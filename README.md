@@ -156,3 +156,20 @@ Este exercício apresenta o clássico problema do "Passeio do Cavalo" em um tabu
 A solução em `KnightsTourBacktracking.c` utiliza backtracking para explorar sistematicamente todas as possíveis movimentações do cavalo no tabuleiro. O algoritmo deve ser capaz de identificar quando uma rota específica não pode mais ser seguida e retroceder para explorar diferentes caminhos até cobrir todo o tabuleiro.
 
 ---
+
+### "Exercise-08-Minefield-AStar"
+
+**Título do Exercício:** Campo Minado com A-Star
+
+**Descrição do Problema:**
+Este exercício é uma variação do problema do "Campo Minado", onde o desafio é encontrar um caminho seguro através de um campo minado usando o algoritmo A* (A-Star). O algoritmo A* é uma técnica de busca heurística que é eficaz na resolução de problemas de caminhos mais curtos e otimização.
+
+**Conteúdo do Diretório:**
+- `minefield.cpp` e `minefield_A_star.cpp`: Códigos-fonte em C++ que implementam a lógica para encontrar caminhos em um campo minado, presumivelmente com e sem o uso do algoritmo A*.
+- `README.md`: Relatório entregue como parte do exercício.
+- Arquivos executáveis e arquivos de texto com resultados de testes ou revisões.
+
+**Abordagem da Solução:**
+`minefield_A_star.cpp` implementa o algoritmo A* para calcular o caminho mais eficiente através do campo minado, levando em conta a distribuição das minas e a otimização do caminho. O algoritmo deve combinar busca e heurísticas para identificar a rota mais segura e eficiente.
+
+---
