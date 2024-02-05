@@ -28,7 +28,7 @@ No Windows utilize o MSYS2 MINGW64 para executar os comandos acima.
 
 ## Exercícios
 
-### "Exercise-01-StableMarriage"
+### ["Exercise-01-StableMarriage"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-01-StableMarriage)
 
 **Título do Exercício:** Problema do Casamento Estável (Stable Marriage Problem)
 
@@ -47,7 +47,7 @@ A solução implementada em `StableMarriage.cpp` utiliza uma abordagem algorítm
 
 ---
 
-### "Exercise-02-JobSequence"
+### ["Exercise-02-JobSequence"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-02-JobSequence)
 
 **Título do Exercício:** Sequenciamento de Trabalhos (Job Sequencing Problem)
 
@@ -65,7 +65,7 @@ A solução utiliza algoritmos de ordenação para sequenciar trabalhos, minimiz
 
 ---
 
-### "Exercise-03-BachelorMachMaking"
+### ["Exercise-03-BachelorMachMaking"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-03-BachelorMachMaking)
 
 **Título do Exercício:** Casamenteiros Profissionais (Bachelor MatchMaking)
 
@@ -83,7 +83,7 @@ A solução consiste na elaboração e implementação de um Algoritmo Guloso.
 
 ---
 
-### "Exercise-04-GenerateWordsWithSpace"
+### ["Exercise-04-GenerateWordsWithSpace"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-04-GenerateWordsWithSpace)
 
 **Título do Exercício:** Gerador de Palavras com Espaços em Branco
 
@@ -101,7 +101,7 @@ A solução em `GenerateWordsWithSpace.c` explora técnicas de manipulação de 
 
 ---
 
-### "Exercise-05-HigherNumber"
+### ["Exercise-05-HigherNumber"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-05-HigherNumber)
 
 **Título do Exercício:** O Maior Número
 
@@ -119,7 +119,7 @@ A solução em `HigherNumber.c` utiliza backtracking. A lógica do programa deve
 
 ---
 
-### "Exercise-06-Minefield"
+### ["Exercise-06-Minefield"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-06-Minefield)
 
 **Título do Exercício:** Campo Minado
 
@@ -138,7 +138,7 @@ A solução em `minefield.c` explora a técnica de backtracking.
 
 ---
 
-### "Exercise-07-KnightsTourBacktracking"
+### ["Exercise-07-KnightsTourBacktracking"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-07-KnightsTourBacktracking)
 
 **Título do Exercício:** Passeio do Cavalo com Backtracking
 
@@ -157,7 +157,7 @@ A solução em `KnightsTourBacktracking.c` utiliza backtracking para explorar si
 
 ---
 
-### "Exercise-08-Minefield-AStar"
+### ["Exercise-08-Minefield-AStar"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-08-Minefield-AStar)
 
 **Título do Exercício:** Campo Minado com A-Star
 
