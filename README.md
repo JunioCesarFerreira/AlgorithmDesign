@@ -82,3 +82,21 @@ O problema "BachelorMachMaking" apresenta um cenário onde, de acordo com uma le
 A solução consiste na elaboração e implementação de um Algoritmo Guloso.
 
 ---
+
+### "Exercise-04-GenerateWordsWithSpace"
+
+**Título do Exercício:** Gerador de Palavras com Espaços em Branco
+
+**Descrição do Problema:**
+O objetivo deste exercício é desenvolver um programa capaz de gerar todas as strings possíveis a partir de uma string dada, inserindo espaços em branco entre cada um dos caracteres da string original. Isso inclui a geração da própria string sem alterações, além de todas as variações possíveis com um ou mais espaços.
+
+**Conteúdo do Diretório:**
+- `GenerateWordsWithSpace.c`: Código-fonte em C que implementa o gerador de palavras com espaços.
+- `Strings.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste adicionais.
+
+**Abordagem da Solução:**
+A solução em `GenerateWordsWithSpace.c` explora técnicas de manipulação de strings e geração de combinações, criando todas as possíveis variações da string de entrada com espaços inseridos.
+
+---
