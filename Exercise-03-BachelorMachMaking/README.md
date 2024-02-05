@@ -8,9 +8,9 @@ O problema "BachelorMachMaking" apresenta um cenário onde, de acordo com uma le
 
 - **Entrada:**
   - O arquivo de entrada contém até 25 conjuntos de dados.
-  - Cada conjunto começa com dois inteiros `B` e `S` ($0 < B, S < 10000$), indicando o número total de solteiros e solteiras, respectivamente.
-  - As próximas `B` linhas contêm um inteiro cada, representando as idades dos solteiros (entre 2 e 60 anos).
-  - As seguintes `S` linhas contêm um inteiro cada, representando as idades das solteiras (entre 2 e 60 anos).
+  - Cada conjunto começa com dois inteiros $B$ e $S$ $(0 < B, S < 10000)$, indicando o número total de solteiros e solteiras, respectivamente.
+  - As próximas $B$ linhas contêm um inteiro cada, representando as idades dos solteiros (entre 2 e 60 anos).
+  - As seguintes $S$ linhas contêm um inteiro cada, representando as idades das solteiras (entre 2 e 60 anos).
   - A entrada termina com uma linha contendo dois zeros.
 
 - **Processo:**
@@ -39,7 +39,7 @@ O problema "BachelorMachMaking" apresenta um cenário onde, de acordo com uma le
 
 Considere, o conjunto de solteiros $B = \{b_1, b_2, ..., b_n\}$ com $n$ solteiros, onde cada $b_i$ representa a idade do $i$-ésimo solteiro. O conjunto de solteiras $S = \{s_1, s_2, ..., s_m\}$ com $m$ solteiras, onde cada $s_j$ representa a idade da $j$-ésima solteira.
 
-Gostariamos de definir uma função $\varphi:S\rightarrow B$ e se tal função existir e não for bijetora determinar $min = B\setminus\varphi(B)$, isto é, achar o menor dos valores que não estão no contra domínio de $\varphi$.
+Gostariamos de definir uma função injetora $\varphi:S\rightarrow B$, e se tal função existir e não for bijetora determinar $min = B\setminus\varphi(B)$, isto é, achar o menor dos valores que não estão no contra domínio de $\varphi$.
 
 ---
 
