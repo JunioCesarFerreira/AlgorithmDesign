@@ -100,3 +100,21 @@ O objetivo deste exercício é desenvolver um programa capaz de gerar todas as s
 A solução em `GenerateWordsWithSpace.c` explora técnicas de manipulação de strings e geração de combinações, criando todas as possíveis variações da string de entrada com espaços inseridos.
 
 ---
+
+### "Exercise-05-HigherNumber"
+
+**Título do Exercício:** O Maior Número
+
+**Descrição do Problema:**
+O desafio deste exercício é encontrar o maior número inteiro possível a partir de um número inteiro M, realizando no máximo K trocas entre os dígitos de M. O número M pode ter até 10 dígitos, e o valor de K varia entre 0 e 5. O objetivo é maximizar o valor do número final após as trocas.
+
+**Conteúdo do Diretório:**
+- `HigherNumber.c`: Código-fonte em C que implementa a lógica para encontrar o maior número possível com as trocas de dígitos.
+- `MaiorNumero.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste adicionais.
+
+**Abordagem da Solução:**
+A solução em `HigherNumber.c` utiliza backtracking. A lógica do programa deve considerar todas as possíveis trocas dentro do limite de K para chegar ao resultado desejado.
+
+---
