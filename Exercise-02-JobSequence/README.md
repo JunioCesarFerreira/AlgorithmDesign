@@ -14,7 +14,7 @@ $$
 C(p) = \sum_{i=1}^{n} \left( \left( \sum_{j=1}^{i} T_{p_j} \right) \cdot S_{p_i} \right)
 $$
 
-Nesta expressão, $\sum_{j=1}^{i} T_{p_j}$ representa o tempo total acumulado até o $i$-ésimo trabalho na permutação, e $S_{p_i}$ é a multa diária por atraso do $i$-ésimo trabalho na permutação. O produto desses dois termos dá o custo de atraso do $i$-ésimo trabalho, e a soma total representa o custo de atraso acumulado para todos os trabalhos na permutação $p$.
+Nesta expressão, $\sum T_{p_j}$ representa o tempo total acumulado até o $i$-ésimo trabalho na permutação, e $S_{p_i}$ é a multa diária por atraso do $i$-ésimo trabalho na permutação. O produto desses dois termos dá o custo de atraso do $i$-ésimo trabalho, e a soma total representa o custo de atraso acumulado para todos os trabalhos na permutação $p$.
 
 O problema, portanto, consiste em encontrar a permutação $p$ que minimiza $C(p)$, ou seja, a sequência de trabalhos que resulta no menor custo total de multas por atraso.
 

@@ -20,6 +20,3 @@ Neste diretório, apresentamos duas soluções para o problema RMQ. A primeira s
 
 A solução baseada em tabela de esparsidade é mais eficiente para um grande número de consultas em uma lista que não é modificada frequentemente, enquanto a solução de força bruta pode ser mais adequada para listas menores ou um número menor de consultas.
 
-## Verificação e Testes
-
-Os resultados dos testes são fornecidos no subdiretório `TestCase`, onde você pode encontrar diferentes conjuntos de dados de teste e os resultados correspondentes.
