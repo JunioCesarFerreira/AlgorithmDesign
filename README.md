@@ -173,3 +173,21 @@ Este exercício é uma variação do problema do "Campo Minado", onde o desafio 
 `minefield_A_star.cpp` implementa o algoritmo A* para calcular o caminho mais eficiente através do campo minado, levando em conta a distribuição das minas e a otimização do caminho. O algoritmo deve combinar busca e heurísticas para identificar a rota mais segura e eficiente.
 
 ---
+
+### ["Exercise-09-RMQ"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-09-RMQ)
+
+**Título do Exercício:** Range Minimum Query (RMQ)
+
+**Descrição do Problema:**
+Este exercício trata do problema de "Range Minimum Query" (Consulta de Mínimo em Intervalo). Este é um problema comum em estruturas de dados, onde o objetivo é determinar o valor mínimo em um subintervalo específico de uma sequência de números.
+
+**Conteúdo do Diretório:**
+- `rmqsq.c` e `rmqsq_N_complexity.c`: Códigos-fonte em C que implementam o algoritmo RMQ, com diferentes complexidades.
+- `rmq.pdf`: Documento que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos executáveis e casos de teste.
+
+**Abordagem da Solução:**
+Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a busca do menor valor no intervalo de forma direta e tem complexidade de tempo $O(N)$ para cada consulta. A segunda solução utiliza uma tabela de esparsidade (pré-processada com complexidade de tempo $O(N \log N)$), permitindo responder a cada consulta em tempo constante $O(1)$.
+
+---
