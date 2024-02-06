@@ -188,6 +188,6 @@ Este exercício trata do problema de "Range Minimum Query" (Consulta de Mínimo 
 - Arquivos executáveis e casos de teste.
 
 **Abordagem da Solução:**
-Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a busca do menor valor no intervalo de forma direta e tem complexidade de tempo $O(N)$ para cada consulta. A segunda solução utiliza uma tabela de esparsidade (pré-processada com complexidade de tempo $O(N \log N)$), permitindo responder a cada consulta em tempo constante $O(1)$.
+Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a busca do menor valor no intervalo de forma direta e tem complexidade de tempo $O(N)$ para cada consulta. A segunda solução utiliza uma tabela de esparsidade (pré-processada com complexidade de tempo $O(N \log N)$ ), permitindo responder a cada consulta em tempo constante $O(1)$.
 
 ---
