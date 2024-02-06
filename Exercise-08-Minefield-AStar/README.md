@@ -24,14 +24,16 @@ Os resultados estão registrados nos arquivos resultN_tag, onde N é o teste rea
 
 Resultados dos testes realizados:
 
-- result1_mf.txt  -> 184 nodes abertos.
-- result2_mf.txt  -> 732 nodes abertos.
-- result3_mf.txt  -> 3372 nodes abertos.
-- result4_mf.txt  -> 6783 nodes abertos.
-- result1_mfA.txt -> 146 nodes abertos.
-- result2_mfA.txt -> 612 nodes abertos.
-- result3_mfA.txt -> 2878 nodes abertos.
-- result4_mfA.txt -> 4300 nodes abertos.
+- result1_mf.txt: *184* nodes abertos.
+- result2_mf.txt: *732* nodes abertos.
+- result3_mf.txt: *3372* nodes abertos.
+- result4_mf.txt: *6783* nodes abertos.
+- result1_mfA.txt: *146* nodes abertos.
+- result2_mfA.txt: *612* nodes abertos.
+- result3_mfA.txt: *2878* nodes abertos.
+- result4_mfA.txt: *4300* nodes abertos.
+
+[Revisão teórica e análise do programa](AStar_Minefield_Analysis.md)
 
 ## Conclusão
 
