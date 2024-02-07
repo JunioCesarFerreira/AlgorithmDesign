@@ -11,7 +11,7 @@ Dado um conjunto de dias $D = \\{d_1, d_2, ..., d_n\\}$, com $d_i$ representando
 Definimos $dp[i]$ como o custo mínimo para cobrir até o $i$-ésimo dia. A relação de recorrência é:
 
 $$
-dp[i] = \min \\{ dp[i-1] + x, \min_{j : d_i - d_j < 7} \\{dp[j+1] + y\\}, \min_{k : d_i - d_k < 30} \\{dp[k+1] + z\} \\}
+dp[i] = \min \big\\{ dp[i-1] + x, \min_{j : d_i - d_j < 7} \\{dp[j+1] + y\\}, \min_{k : d_i - d_k < 30} \\{dp[k+1] + z\\} \big\\}
 $$
 
 onde:
