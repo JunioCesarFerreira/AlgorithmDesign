@@ -202,9 +202,28 @@ Este exercício trata de uma playlist de música contendo $n$ músicas. Cada mú
 **Conteúdo do Diretório:**
 - `playlist.c` e `playlist_binary_search.c`: Códigos-fonte em C que implementam a lógica para trabalhar com a playlist de Eugeny, possivelmente com diferentes abordagens algorítmicas.
 - `EugenyPlaylist.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivos executáveis e casos de teste.
 
 **Abordagem da Solução:**
 As soluções implementadas podem utilizar estruturas de dados para organizar as músicas e realizar consultas eficientes sobre a playlist, talvez empregando busca binária (como sugerido por um dos nomes de arquivo) para encontrar músicas com base em durações acumuladas ou outros critérios.
+
+---
+
+### ["Exercise-11-ResortTickets"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-11-ResortTickets)
+
+**Título do Exercício:** Ingressos para Resort (Resort Tickets)
+
+**Descrição do Problema:**
+O exercício "Resort Tickets" envolve um cenário onde John planeja visitar um resort. O resort requer passes diários para cada dia de estadia. John não ficará no resort todos os dias, mas apenas em alguns dias específicos, identificados como d. Por exemplo, se d = {1, 4, 5}, John precisa de passes apenas para os dias 1, 4 e 5. O resort vende passes de três maneiras: um passe de 1 dia por x dólares, um passe de 7 dias por y dólares e um passe de 30 dias por z dólares. O desafio é determinar a quantia mínima de dinheiro que John precisa para ter passes para todos os dias listados em d.
+
+**Conteúdo do Diretório:**
+- `resortTickets.c`: Código-fonte em C que implementa a lógica para calcular a quantia mínima necessária para adquirir os passes.
+- `resort-tickets.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução proposta usa programação dinâmica para calcular de maneira eficiente o custo mínimo para todos os dias especificados.
 
 ---
