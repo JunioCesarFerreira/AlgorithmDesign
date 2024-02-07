@@ -2,23 +2,25 @@
 
 ## Enunciado
 
-O problema "Resort Tickets" desafia a calcular o custo mínimo para cobrir um conjunto de $n$ dias em um resort, utilizando três tipos de passes disponíveis: um passe diário com custo $x$, um passe semanal (7 dias) com custo $y$, e um passe mensal (30 dias) com custo $z$. Cada dia tem uma data específica, e o objetivo é determinar o custo mínimo para cobrir todos os dias indicados, optando pela combinação ótima de passes.
+No problema "Resort Tickets", um visitante planeja uma estadia em um resort por $n$ dias específicos. O resort oferece três tipos de ingressos para acesso: um ingresso de 1 dia ao custo de $x$, um ingresso de 7 dias ao custo de $y$, e um ingresso de 30 dias ao custo de $z$. Cada dia da estadia do visitante é marcado por uma data específica dentro de um intervalo. O desafio é determinar a estratégia de compra de ingressos que minimize o custo total para cobrir exatamente os dias da estadia, dado que cada ingresso adquirido cobre um contínuo intervalo de dias no resort.
 
 ## Formulação Matemática do Problema
 
-Dado um conjunto de dias $D = \\{d_1, d_2, ..., d_n\\}$, com $d_i$ representando a data do $i$-ésimo dia, e os custos $x$, $y$, e $z$ para os passes diário, semanal e mensal respectivamente, o objetivo é minimizar o custo total $C$ para cobrir todos os $n$ dias.
+Seja $D = \\{d_1, d_2, ..., d_n\\}$ o conjunto de dias, representando as datas específicas de estadia no resort, onde $n$ é o total de dias. Os custos para os ingressos de 1 dia, 7 dias e 30 dias são representados por $x$, $y$ e $z$, respectivamente.
 
-Definimos $dp[i]$ como o custo mínimo para cobrir até o $i$-ésimo dia. A relação de recorrência é:
+Definimos uma função de custo acumulado $dp[i]$, onde $dp[i]$ representa o custo mínimo para cobrir os primeiros $i$ dias da estadia. A relação de recorrência para calcular $dp[i]$ é dada por:
 
 $$
-dp[i] = \min \Big\\{ dp[i-1] + x, \min_{j : d_i - d_j < 7} \big\\{dp[j+1] + y\big\\}, \min_{k : d_i - d_k < 30} \big\\{dp[k+1] + z\big\\} \Big\\}
+dp[i] = \Big\\{dp[i-1] + x, \min_{\substack{j < i \\ d_i - d_j < 7}}\\{dp[j] + y\\}, \min_{\substack{k < i \\ d_i - d_k < 30}}\\{dp[k] + z\\}\big\\}
 $$
 
 onde:
-- $dp[0] = 0$, representando o custo para cobrir 0 dias.
-- O primeiro termo calcula o custo adicionando um passe diário para o $i$-ésimo dia.
-- O segundo termo calcula o custo adicionando um passe semanal que cobre o $i$-ésimo dia e os dias precedentes até que a diferença seja menor que 7.
-- O terceiro termo calcula o custo adicionando um passe mensal sob condições similares ao passe semanal.
+- $dp[0] = 0$ serve como condição base, indicando que não há custo para cobrir 0 dias.
+- O primeiro termo dentro do min{} calcula o custo adicionando um ingresso de 1 dia para o $i$-ésimo dia.
+- O segundo termo busca o custo mínimo adicionando um ingresso de 7 dias que cobre o $i$-ésimo dia e os dias anteriores dentro do intervalo de 7 dias.
+- O terceiro termo busca o custo mínimo adicionando um ingresso de 30 dias que cobre o $i$-ésimo dia e os dias anteriores dentro do intervalo de 30 dias.
+
+O objetivo é determinar $dp[n]$, que representa o custo mínimo para cobrir todos os $n$ dias da estadia.
 
 ## Sobre a Solução
 
