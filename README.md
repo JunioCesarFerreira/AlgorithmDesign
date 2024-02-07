@@ -194,7 +194,7 @@ Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a
 
 ### ["Exercise-10-EugenyPlaylist"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-10-EugenyPlaylist)
 
-**Título do Exercício:** Eugeny e a Playlist
+**Título do Exercício:** Eugeny and Play List
 
 **Descrição do Problema:**
 Este exercício trata de uma playlist de música contendo $n$ músicas. Cada música $i$ tem uma duração específica $t_i$ em minutos, e Eugeny ouve cada música $c_i$ vezes. A playlist é organizada de modo que a música número 1 toca $c_1$ vezes, seguida pela música número 2 que toca $c_2$ vezes, e assim por diante até a música número $n$. O desafio consiste em identificar qual música Eugeny está ouvindo em um dado momento, considerando a organização única e as durações das músicas na playlist.
