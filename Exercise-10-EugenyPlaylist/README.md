@@ -9,10 +9,11 @@ O problema *"Eugeny and Playlist"* envolve uma playlist de música com $n$ músi
 Podemos formular o problema por definir uma função $s:D_n\rightarrow C_n$ sendo 
 
 $$
-D_n = {0, 1, 2, ..., \sum_{i=0}^{1}c_i t_i}
+D_n = \{ 0, 1, 2, ..., \sum_{i=0}^{1}c_i t_i \}
 $$
+
 $$
-C_n = {1,2,3,...,n}
+C_n = \{ 1,2,3,...,n \}
 $$
 
 Definimos também:
