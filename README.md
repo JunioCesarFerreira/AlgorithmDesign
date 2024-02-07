@@ -191,3 +191,20 @@ Este exercício trata do problema de "Range Minimum Query" (Consulta de Mínimo 
 Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a busca do menor valor no intervalo de forma direta e tem complexidade de tempo $O(N)$ para cada consulta. A segunda solução utiliza uma tabela de esparsidade (pré-processada com complexidade de tempo $O(N \log N)$ ), permitindo responder a cada consulta em tempo constante $O(1)$.
 
 ---
+
+### ["Exercise-10-EugenyPlaylist"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-10-EugenyPlaylist)
+
+**Título do Exercício:** Eugeny e a Playlist
+
+**Descrição do Problema:**
+Este exercício trata de uma playlist de música contendo $n$ músicas. Cada música $i$ tem uma duração específica $t_i$ em minutos, e Eugeny ouve cada música $c_i$ vezes. A playlist é organizada de modo que a música número 1 toca $c_1$ vezes, seguida pela música número 2 que toca $c_2$ vezes, e assim por diante até a música número $n$. O desafio consiste em identificar qual música Eugeny está ouvindo em um dado momento, considerando a organização única e as durações das músicas na playlist.
+
+**Conteúdo do Diretório:**
+- `playlist.c` e `playlist_binary_search.c`: Códigos-fonte em C que implementam a lógica para trabalhar com a playlist de Eugeny, possivelmente com diferentes abordagens algorítmicas.
+- `EugenyPlaylist.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- Arquivos executáveis e casos de teste.
+
+**Abordagem da Solução:**
+As soluções implementadas podem utilizar estruturas de dados para organizar as músicas e realizar consultas eficientes sobre a playlist, talvez empregando busca binária (como sugerido por um dos nomes de arquivo) para encontrar músicas com base em durações acumuladas ou outros critérios.
+
+---
