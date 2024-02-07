@@ -227,3 +227,21 @@ O exercício "Resort Tickets" envolve um cenário onde John planeja visitar um r
 A solução proposta usa programação dinâmica para calcular de maneira eficiente o custo mínimo para todos os dias especificados.
 
 ---
+
+### ["Exercise-12-MoutainJump"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-12-MoutainJump)
+
+**Título do Exercício:** Salto na Montanha (Mountain Jump)
+
+**Descrição do Problema:**
+O exercício "Mountain Jump" envolve um cenário de férias onde John decide escalar montanhas em uma Cadeia Montanhosa. A cadeia contém $n$ montanhas, numeradas de $1$ a $n$. John não está interessado em visitar todas as montanhas, mas sim em começar na primeira montanha e chegar à última realizando alguns saltos. Cada montanha $i$ tem uma altura $h_i$, e o desafio envolve a logística de John saltar entre as montanhas, com restrições com base na altura das montanhas e na distância entre elas.
+
+**Conteúdo do Diretório:**
+- `moutainJump.c`: Código-fonte em C que implementa a lógica para o desafio de saltos na montanha.
+- `mountain-jumps.pdf`: Documento descrevendo o exercício e as especificações do problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução implementada utiliza programação dinâmica para calcular eficientemente o esforço mínimo necessário para John alcançar cada montanha na cadeia.
+
+---
