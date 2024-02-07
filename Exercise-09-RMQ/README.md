@@ -9,7 +9,7 @@ Dada uma lista de N números inteiros e Q consultas, cada consulta consiste em d
 Podemos formular o problema RMQ definindo a seguinte função: $F:\mathbb{Z}^N\times\mathbb{Z}^2\rightarrow\mathbb{Z}$, onde $N\in\mathbb{Z}_+$. Definimos a função $F$ por:
 
 $$ 
-F(A, (L,R)):=\min\{A_L, A_{L+1}, ..., A_R\}
+F(A, (L,R)):=\min\\{A_L, A_{L+1}, ..., A_R\\}
 $$
 
 para uma lista $A$ de tamanho $N$ e uma consulta $(L, R)$. O problema consiste em calcular $F(A, (L,R))$ para várias consultas $(L, R)$.
