@@ -6,12 +6,12 @@ O problema "Resort Tickets" desafia a calcular o custo mínimo para cobrir um co
 
 ## Formulação Matemática do Problema
 
-Dado um conjunto de dias $D = \{d_1, d_2, ..., d_n\}$, com $d_i$ representando a data do $i$-ésimo dia, e os custos $x$, $y$, e $z$ para os passes diário, semanal e mensal respectivamente, o objetivo é minimizar o custo total $C$ para cobrir todos os $n$ dias.
+Dado um conjunto de dias $D = \\{d_1, d_2, ..., d_n\\}$, com $d_i$ representando a data do $i$-ésimo dia, e os custos $x$, $y$, e $z$ para os passes diário, semanal e mensal respectivamente, o objetivo é minimizar o custo total $C$ para cobrir todos os $n$ dias.
 
 Definimos $dp[i]$ como o custo mínimo para cobrir até o $i$-ésimo dia. A relação de recorrência é:
 
 $$
-dp[i] = \min \left\{ dp[i-1] + x, \min_{j : d_i - d_j < 7} \{dp[j+1] + y\}, \min_{k : d_i - d_k < 30} \{dp[k+1] + z\} \right\}
+dp[i] = \min \\{ dp[i-1] + x, \min_{j : d_i - d_j < 7} \\{dp[j+1] + y\\}, \min_{k : d_i - d_k < 30} \\{dp[k+1] + z\} \\}
 $$
 
 onde:
