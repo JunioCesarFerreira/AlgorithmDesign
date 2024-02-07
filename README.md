@@ -206,7 +206,7 @@ Este exercício trata de uma playlist de música contendo $n$ músicas. Cada mú
 - Arquivos executáveis e casos de teste.
 
 **Abordagem da Solução:**
-As soluções implementadas podem utilizar estruturas de dados para organizar as músicas e realizar consultas eficientes sobre a playlist, talvez empregando busca binária (como sugerido por um dos nomes de arquivo) para encontrar músicas com base em durações acumuladas ou outros critérios.
+São apresentadas duas soluçãos. Uma solução com tempo de execução linear $O(N)$ e outra solução que utiliza busca binária com tempo de execução $O(\log N)$.
 
 ---
 
