@@ -11,7 +11,7 @@ Seja $D = \\{d_1, d_2, ..., d_n\\}$ o conjunto de dias, representando as datas e
 Definimos uma função de custo acumulado $dp[i]$, onde $dp[i]$ representa o custo mínimo para cobrir os primeiros $i$ dias da estadia. A relação de recorrência para calcular $dp[i]$ é dada por:
 
 $$
-dp[i] = \Big\\{dp[i-1] + x, \min_{\substack{j < i \\\\ d_i - d_j < 7}}\big\\{dp[j] + y\big\\}, \min_{\substack{k < i \\\\ d_i - d_k < 30}}\big\\{dp[k] + z\big\\}\Big\\}
+dp[i] = \left\\{dp[i-1] + x, \min_{\substack{j < i \\\\ d_i - d_j < 7}}\left\\{dp[j] + y\rigth\\}, \min_{\substack{k < i \\\\ d_i - d_k < 30}}\left\\{dp[k] + z\rigth\\}\rigth\\}
 $$
 
 onde:
