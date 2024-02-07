@@ -245,3 +245,21 @@ O exercício "Mountain Jump" envolve um cenário de férias onde John decide esc
 A solução implementada utiliza programação dinâmica para calcular eficientemente o esforço mínimo necessário para John alcançar cada montanha na cadeia.
 
 ---
+
+### ["Exercise-13-BookShop"](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-13-BookShop)
+
+**Título do Exercício:** Livraria (BookShop)
+
+**Descrição do Problema:**
+No exercício "Book Shopping", você se encontra em uma livraria que oferece $n$ diferentes livros à venda. Para cada livro, você conhece seu preço e o número de páginas. Com uma quantia específica de dinheiro $x$ disponível para gastar, seu objetivo é maximizar o número total de páginas que você pode comprar, sem exceder o orçamento.
+
+**Conteúdo do Diretório:**
+- `bookShop.c`: Código-fonte em C que implementa o algoritmo utilizando PD.
+- `books.pdf`: Documento que descreve o exercício, mas está vazio ou ilegível.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos executáveis e casos de teste.
+
+**Abordagem da Solução:**
+A solução implementada usa programação dinâmica para calcular, de forma eficiente, a melhor estratégia de compra de livros.
+
+---
