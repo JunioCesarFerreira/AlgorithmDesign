@@ -2,7 +2,7 @@
 
 ## Enunciado
 
-O problema *"Eugeny and Play List"* envolve uma playlist de música com $n$ músicas distintas. Cada faixa $i$ tem uma duração determinada em minutos e é reproduzida $c_i$ vezes consecutivamente. A playlist é estruturada de tal forma que a primeira música é tocada $c_1$ vezes, seguida pela segunda música, que também é tocada $c_2$ vezes, continuando até a última música, $n$. O desafio consiste em identificar qual música Eugeny está ouvindo em um dado momento, considerando a organização única e as durações das músicas na playlist.
+O problema *"Eugeny and Playlist"* envolve uma playlist de música com $n$ músicas distintas. Cada faixa $i$ tem uma duração determinada em minutos e é reproduzida $c_i$ vezes consecutivamente. A playlist é estruturada de tal forma que a primeira música é tocada $c_1$ vezes, seguida pela segunda música, que também é tocada $c_2$ vezes, continuando até a última música, $n$. O desafio consiste em identificar qual música Eugeny está ouvindo em um dado momento, considerando a organização única e as durações das músicas na playlist.
 
 ## Formulação Matemática do Problema
 
