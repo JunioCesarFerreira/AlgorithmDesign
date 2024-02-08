@@ -301,4 +301,20 @@ Implementamos três abordagens para calcular a distância de Levenshtein, sendo 
 
 ---
 
+## [Exercise-16-LCS](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-16-LCS)
+
+**Título do Exercício:** Maior Subsequência Comum (LCS - Longest Common Subsequence)
+
+**Descrição do Problema:**
+Este exercício trata do problema da Maior Subsequência Comum. Este é um problema clássico em ciência da computação, onde o objetivo é encontrar a maior subsequência comum entre duas ou mais sequências de dados, sem a necessidade de os elementos estarem em sequência consecutiva.
+
+**Conteúdo do Diretório:**
+- `lcs.c`: Código-fonte em C que implementa o algoritmo para encontrar a maior subsequência comum.
+- `LCS.pdf`: Documento original que descreve o exercício.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução utiliza programação dinâmica, apresentando duas implementações, uma recursiva e outra iterativa.
+
+---
 ---
