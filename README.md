@@ -279,6 +279,26 @@ No problema "Grid Path", é dada uma grade de tamanho $n \times n$ onde alguns q
 - Arquivo executável e casos de teste.
 
 **Abordagem da Solução:**
-A solução implementada explora a técnica de programação dinâmica para calcular, de forma eficiente, o número total de caminhos válidos na grade, levando em consideração as restrições impostas.
+A solução implementada explora a técnica de c para calcular, de forma eficiente, o número total de caminhos válidos na grade, levando em consideração as restrições impostas.
+
+---
+
+## [Exercise-15-EditDistance](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-15-EditDistance)
+
+**Título do Exercício:** Distância de Edição (Edit Distance)
+
+**Descrição do Problema:**
+Este exercício aborda o problema da distância de edição, também conhecido como distância de Levenshtein. Este problema clássico envolve determinar o número mínimo de operações de edição (inserções, deleções e substituições de caracteres) necessárias para transformar uma string em outra.
+
+**Conteúdo do Diretório:**
+- `EditDistance.c`: Código-fonte em C que implementa a lógica para calcular a distância de edição entre duas strings.
+- `EditDist.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos de teste e um arquivo executável.
+
+**Abordagem da Solução:**
+Implementamos três abordagens para calcular a distância de Levenshtein, sendo duas delas com programação dinâmica.
+
+---
 
 ---
