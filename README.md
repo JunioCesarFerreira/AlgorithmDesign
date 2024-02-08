@@ -25,6 +25,7 @@ Caso queira registrar a saída em arquivo utilize por exemplo:
 **Observação**:
 No Windows utilize o MSYS2 MINGW64 para executar os comandos acima.
 
+---
 
 # Exercícios
 
@@ -255,11 +256,29 @@ No exercício "Book Shopping", você se encontra em uma livraria que oferece $n$
 
 **Conteúdo do Diretório:**
 - `bookShop.c`: Código-fonte em C que implementa o algoritmo utilizando PD.
-- `books.pdf`: Documento que descreve o exercício, mas está vazio ou ilegível.
+- `books.pdf`: Documento original que descreve o exercício.
 - `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivos executáveis e casos de teste.
 
 **Abordagem da Solução:**
 A solução implementada usa programação dinâmica para calcular, de forma eficiente, a melhor estratégia de compra de livros.
+
+---
+
+## [Exercise-14-PathGrid](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-14-PathGrid)
+
+**Título do Exercício:** Caminho na Grade (PathGrid)
+
+**Descrição do Problema:**
+No problema "Grid Path", é dada uma grade de tamanho $n \times n$ onde alguns quadrados podem conter armadilhas. Sua missão é determinar o número total de caminhos possíveis da célula no canto superior esquerdo até a célula no canto inferior direito da grade, obedecendo à regra de que apenas movimentos para a direita ou para baixo são permitidos e quadrados com armadilhas são intransitáveis.
+
+**Conteúdo do Diretório:**
+- `pathGrid.c`: Código-fonte em C que implementa a lógica para resolver o desafio de navegação na grade.
+- `grid.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução implementada explora a técnica de programação dinâmica para calcular, de forma eficiente, o número total de caminhos válidos na grade, levando em consideração as restrições impostas.
 
 ---
