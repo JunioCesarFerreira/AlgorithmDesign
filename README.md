@@ -329,6 +329,7 @@ Este exercício trata do problema de encontrar a rota mais curta em uma rede ou 
 **Conteúdo do Diretório:**
 - `shortestRoute.cpp`: Código-fonte em C++ que implementa o algoritmo para encontrar a rota mais curta.
 - `ShortestRoute.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivos de teste e um arquivo executável.
 
 **Abordagem da Solução:**
@@ -346,6 +347,7 @@ Dadas $n$ cidades conectadas por $m$ rodovias. As condições atuais das rodovia
 **Conteúdo do Diretório:**
 - `roadReparation.cpp`: Código-fonte em C++ que implementa a solução para o problema de reparação de estradas.
 - `RoadReparation.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivo executável e casos de teste.
 
 **Abordagem da Solução:**
