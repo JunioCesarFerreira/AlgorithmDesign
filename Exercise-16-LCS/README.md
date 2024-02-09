@@ -1,6 +1,6 @@
 # Exercise Longest Common Subsequence (LCS)
 
-## Enunciado Refinado
+## Enunciado
 
 O problema "Longest Common Subsequence (LCS)" é um desafio clássico em ciência da computação que envolve encontrar a maior subsequência comum entre duas strings. Dadas duas sequências, a tarefa é determinar a maior subsequência que pode ser extraída de ambas as sequências, sem alterar a ordem dos elementos, mas não necessariamente exigindo que os elementos sejam consecutivos. Este problema é fundamental para várias aplicações, incluindo bioinformática, análise de texto e controle de versões.
 

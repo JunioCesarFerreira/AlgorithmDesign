@@ -311,6 +311,7 @@ Este exercício trata do problema da Maior Subsequência Comum. Este é um probl
 **Conteúdo do Diretório:**
 - `lcs.c`: Código-fonte em C que implementa o algoritmo para encontrar a maior subsequência comum.
 - `LCS.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivo executável e casos de teste.
 
 **Abordagem da Solução:**
