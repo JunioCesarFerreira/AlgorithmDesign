@@ -335,4 +335,21 @@ Este exercício trata do problema de encontrar a rota mais curta em uma rede ou 
 A solução implementada utiliza o algoritmo de Dijkstra para calcular a distância mínima entre todas as cidades e armazenar essas distâncias numa matriz de distâncias
 
 ---
+
+## [Exercise-18-RoadReparation](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-18-RoadReparation)
+
+**Título do Exercício:** Reparação de Estradas (Road Reparation)
+
+**Descrição do Problema:**
+Dadas $n$ cidades conectadas por $m$ rodovias. As condições atuais das rodovias são precárias, exigindo reparos para garantir a transitabilidade. Cada rodovia entre duas cidades tem um custo associado ao seu reparo. O objetivo é determinar um conjunto de reparos nas rodovias que conecte todas as cidades com o menor custo total possível, garantindo que haja um caminho entre quaisquer duas cidades.
+
+**Conteúdo do Diretório:**
+- `roadReparation.cpp`: Código-fonte em C++ que implementa a solução para o problema de reparação de estradas.
+- `RoadReparation.pdf`: Documento original que descreve o exercício.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução implementada emprega o algoritmo de Kruskal para encontrar a árvore geradora mínima.
+
+---
 ---
