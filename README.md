@@ -318,4 +318,21 @@ Este exercício trata do problema da Maior Subsequência Comum. Este é um probl
 A solução utiliza programação dinâmica, apresentando duas implementações, uma recursiva e outra iterativa.
 
 ---
+
+## [Exercise-17-ShortestRoute](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-17-ShortestRoute)
+
+**Título do Exercício:** Rota Mais Curta (Shortest Route)
+
+**Descrição do Problema:**
+Este exercício trata do problema de encontrar a rota mais curta em uma rede ou grafo. Este é um problema clássico em algoritmos de grafos, onde o objetivo é determinar o caminho mais eficiente ou de menor distância entre dois ou mais pontos.
+
+**Conteúdo do Diretório:**
+- `shortestRoute.cpp`: Código-fonte em C++ que implementa o algoritmo para encontrar a rota mais curta.
+- `ShortestRoute.pdf`: Documento original que descreve o exercício.
+- Arquivos de teste e um arquivo executável.
+
+**Abordagem da Solução:**
+A solução implementada utiliza o algoritmo de Dijkstra para calcular a distância mínima entre todas as cidades e armazenar essas distâncias numa matriz de distâncias
+
+---
 ---
