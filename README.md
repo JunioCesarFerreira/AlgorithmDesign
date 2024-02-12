@@ -367,4 +367,18 @@ Neste exercício é abordado um problema relacionado ao cálculo do comprimento 
 A solução aplica o algoritmo de Floyd-Warshall para encontrar todas as distâncias mínimas e, em seguida, calcula e exibe o comprimento médio do caminho mais curto entre todos os pares de vértices.
 
 ---
+
+## [Exercise-22-Primes](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-22-Primes)
+
+**Descrição do Problema:**
+Este exercício aborda a área da teoria dos números focada em propriedades de números, especificamente a questão da primalidade. Um número primo é aquele que não possui fatores próprios, sendo divisível apenas por 1 e por si mesmo. O problema explora questões relacionadas à densidade dos números primos em diferentes intervalos e a identificação de primos adjacentes.
+
+**Conteúdo do Diretório:**
+- `primes.cpp`, `segmentSieve.cpp`: Códigos-fonte em C++ que implementam algoritmos para identificar e trabalhar com números primos.
+- `p10140.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos executáveis e casos de teste.
+
+**Abordagem da Solução:**
+As soluções apresentadas utilizam o crivo de Eratóstenes para identificar números primos.
 ---
