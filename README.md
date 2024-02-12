@@ -381,4 +381,20 @@ Este exercício aborda a área da teoria dos números focada em propriedades de 
 
 **Abordagem da Solução:**
 As soluções apresentadas utilizam o crivo de Eratóstenes para identificar números primos.
+
+---
+
+## [Exercise-23-ExtraChocolates](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-23-ExtraChocolates)
+
+**Descrição do Problema:**
+O enunciado deste exercício conta a história de Little Pippy, que recebeu muitos chocolates em seu 6º aniversário. Ela deseja compartilhar os chocolates com seus amigos e, em caso de sobra, dar o restante para seu gato de estimação, Kittu. O desafio envolve a distribuição de chocolates, que estão em caixas, para que cada amigo receba um número igual de chocolates, e qualquer resto seja dado ao gato.
+
+**Conteúdo do Diretório:**
+- `extraChocolates.c`: Código-fonte em C que implementa a solução para o problema de distribuição de chocolates.
+- `p10489.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução faz uso de operações modulares para garantir que a distribuição dos chocolates seja feita de forma a maximizar a igualdade entre os amigos de Pippy e determinar a quantidade de chocolates que sobrará para Kittu, o gato
 ---
