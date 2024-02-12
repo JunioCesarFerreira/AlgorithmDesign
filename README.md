@@ -31,8 +31,6 @@ No Windows utilize o MSYS2 MINGW64 para executar os comandos acima.
 
 ## [Exercise-01-StableMarriage](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-01-StableMarriage)
 
-**Título do Exercício:** Problema do Casamento Estável (Stable Marriage Problem)
-
 **Descrição do Problema:**
 Este exercício aborda o clássico Problema do Casamento Estável. Nele, são dados $n$ homens e $n$ mulheres. Cada mulher classifica todos os homens em ordem de sua preferência, e cada homem faz o mesmo com todas as mulheres. O objetivo é organizar $n$ casamentos de tal maneira que, se um homem prefere alguma mulher mais do que sua esposa, então essa mulher gosta mais do seu marido atual do que do referido homem. Desta forma, garante-se que ninguém deixa seu parceiro atual para se casar com outra pessoa. O desafio é encontrar uma solução para este problema, que sempre existe.
 
@@ -50,8 +48,6 @@ A solução implementada em `StableMarriage.cpp` utiliza uma abordagem algorítm
 
 ## [Exercise-02-JobSequence](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-02-JobSequence)
 
-**Título do Exercício:** Sequenciamento de Trabalhos (Job Sequencing Problem)
-
 **Descrição do Problema:**
 Este exercício apresenta o problema de um sapateiro que tem uma série de trabalhos a completar. O desafio é organizar a sequência de trabalhos de tal forma que minimize a multa total, considerando que ele só pode completar um trabalho por dia e há uma multa associada a cada dia de atraso na conclusão de cada trabalho. Cada trabalho tem um tempo de conclusão específico e uma multa por atraso.
 
@@ -67,8 +63,6 @@ A solução utiliza algoritmos de ordenação para sequenciar trabalhos, minimiz
 ---
 
 ## [Exercise-03-BachelorMachMaking](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-03-BachelorMachMaking)
-
-**Título do Exercício:** Casamenteiros Profissionais (Bachelor MatchMaking)
 
 **Descrição do Problema:**
 O problema "BachelorMachMaking" apresenta um cenário onde, de acordo com uma lei fictícia, solteiros e solteiras de uma comunidade devem se casar com a pessoa do sexo oposto cuja idade é mais próxima da sua, seguindo a ordem de senioridade dos solteiros. O objetivo é determinar o número de solteiros que permanecem solteiros após todos os casamentos possíveis terem sido realizados conforme a lei, e a idade do solteiro mais jovem restante, se houver algum.
@@ -86,8 +80,6 @@ A solução consiste na elaboração e implementação de um Algoritmo Guloso.
 
 ## [Exercise-04-GenerateWordsWithSpace](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-04-GenerateWordsWithSpace)
 
-**Título do Exercício:** Gerador de Palavras com Espaços em Branco
-
 **Descrição do Problema:**
 O objetivo deste exercício é desenvolver um programa capaz de gerar todas as strings possíveis a partir de uma string dada, inserindo espaços em branco entre cada um dos caracteres da string original. Isso inclui a geração da própria string sem alterações, além de todas as variações possíveis com um ou mais espaços.
 
@@ -104,8 +96,6 @@ A solução em `GenerateWordsWithSpace.c` explora técnicas de manipulação de 
 
 ## [Exercise-05-HigherNumber](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-05-HigherNumber)
 
-**Título do Exercício:** O Maior Número
-
 **Descrição do Problema:**
 O desafio deste exercício é encontrar o maior número inteiro possível a partir de um número inteiro M, realizando no máximo K trocas entre os dígitos de M. O número M pode ter até 10 dígitos, e o valor de K varia entre 0 e 5. O objetivo é maximizar o valor do número final após as trocas.
 
@@ -121,8 +111,6 @@ A solução em `HigherNumber.c` utiliza backtracking. A lógica do programa deve
 ---
 
 ## [Exercise-06-Minefield](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-06-Minefield)
-
-**Título do Exercício:** Campo Minado
 
 **Descrição do Problema:**
 Este exercício envolve a navegação através de um "Campo Minado", representado por uma matriz retangular com L linhas e C colunas. As minas estão posicionadas aleatoriamente na matriz. O desafio é calcular a menor rota possível de uma célula da primeira coluna até uma célula da última coluna, evitando as minas. Existe a possibilidade de que, devido à alta densidade de minas, não haja um caminho seguro até o destino.
@@ -141,8 +129,6 @@ A solução em `minefield.c` explora a técnica de backtracking.
 
 ## [Exercise-07-KnightsTourBacktracking](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-07-KnightsTourBacktracking)
 
-**Título do Exercício:** Passeio do Cavalo com Backtracking
-
 **Descrição do Problema:**
 Este exercício apresenta o clássico problema do "Passeio do Cavalo" em um tabuleiro de xadrez, onde o objetivo é mover um cavalo para cada casa do tabuleiro uma única vez. A abordagem utilizada para solução é o backtracking, uma técnica algorítmica para encontrar todas as soluções possíveis ao problema, voltando atrás em decisões anteriores caso elas levem a um beco sem saída.
 
@@ -160,8 +146,6 @@ A solução em `KnightsTourBacktracking.c` utiliza backtracking para explorar si
 
 ## [Exercise-08-Minefield-AStar](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-08-Minefield-AStar)
 
-**Título do Exercício:** Campo Minado com A-Star
-
 **Descrição do Problema:**
 Este exercício é uma variação do problema do "Campo Minado", onde o desafio é encontrar um caminho seguro através de um campo minado usando o algoritmo A* (A-Star). O algoritmo A* é uma técnica de busca heurística que é eficaz na resolução de problemas de caminhos mais curtos e otimização.
 
@@ -176,8 +160,6 @@ Este exercício é uma variação do problema do "Campo Minado", onde o desafio 
 ---
 
 ## [Exercise-09-RMQ](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-09-RMQ)
-
-**Título do Exercício:** Range Minimum Query (RMQ)
 
 **Descrição do Problema:**
 Este exercício trata do problema de "Range Minimum Query" (Consulta de Mínimo em Intervalo). Este é um problema comum em estruturas de dados, onde o objetivo é determinar o valor mínimo em um subintervalo específico de uma sequência de números.
@@ -195,8 +177,6 @@ Apresentamos duas soluções para o problema RMQ. A primeira solução realiza a
 
 ## [Exercise-10-EugenyPlaylist](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-10-EugenyPlaylist)
 
-**Título do Exercício:** Eugeny and Playlist
-
 **Descrição do Problema:**
 Este exercício trata de uma playlist de música contendo $n$ músicas. Cada música $i$ tem uma duração específica $t_i$ em minutos, e Eugeny ouve cada música $c_i$ vezes. A playlist é organizada de modo que a música número 1 toca $c_1$ vezes, seguida pela música número 2 que toca $c_2$ vezes, e assim por diante até a música número $n$. O desafio consiste em identificar qual música Eugeny está ouvindo em um dado momento, considerando a organização única e as durações das músicas na playlist.
 
@@ -212,8 +192,6 @@ São apresentadas duas soluçãos. Uma solução com tempo de execução linear 
 ---
 
 ## [Exercise-11-ResortTickets](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-11-ResortTickets)
-
-**Título do Exercício:** Ingressos para Resort (Resort Tickets)
 
 **Descrição do Problema:**
 O exercício "Resort Tickets" envolve um cenário onde John planeja visitar um resort. O resort requer passes diários para cada dia de estadia. John não ficará no resort todos os dias, mas apenas em alguns dias específicos, identificados como d. Por exemplo, se d = {1, 4, 5}, John precisa de passes apenas para os dias 1, 4 e 5. O resort vende passes de três maneiras: um passe de 1 dia por x dólares, um passe de 7 dias por y dólares e um passe de 30 dias por z dólares. O desafio é determinar a quantia mínima de dinheiro que John precisa para ter passes para todos os dias listados em d.
@@ -231,8 +209,6 @@ A solução proposta usa programação dinâmica para calcular de maneira eficie
 
 ## [Exercise-12-MoutainJump](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-12-MoutainJump)
 
-**Título do Exercício:** Salto na Montanha (Mountain Jump)
-
 **Descrição do Problema:**
 O exercício "Mountain Jump" envolve um cenário de férias onde John decide escalar montanhas em uma Cadeia Montanhosa. A cadeia contém $n$ montanhas, numeradas de $1$ a $n$. John não está interessado em visitar todas as montanhas, mas sim em começar na primeira montanha e chegar à última realizando alguns saltos. Cada montanha $i$ tem uma altura $h_i$, e o desafio envolve a logística de John saltar entre as montanhas, com restrições com base na altura das montanhas e na distância entre elas.
 
@@ -248,8 +224,6 @@ A solução implementada utiliza programação dinâmica para calcular eficiente
 ---
 
 ## [Exercise-13-BookShop](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-13-BookShop)
-
-**Título do Exercício:** Livraria (BookShop)
 
 **Descrição do Problema:**
 No exercício "Book Shopping", você se encontra em uma livraria que oferece $n$ diferentes livros à venda. Para cada livro, você conhece seu preço e o número de páginas. Com uma quantia específica de dinheiro $x$ disponível para gastar, seu objetivo é maximizar o número total de páginas que você pode comprar, sem exceder o orçamento.
@@ -267,8 +241,6 @@ A solução implementada usa programação dinâmica para calcular, de forma efi
 
 ## [Exercise-14-PathGrid](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-14-PathGrid)
 
-**Título do Exercício:** Caminho na Grade (PathGrid)
-
 **Descrição do Problema:**
 No problema "Grid Path", é dada uma grade de tamanho $n \times n$ onde alguns quadrados podem conter armadilhas. Sua missão é determinar o número total de caminhos possíveis da célula no canto superior esquerdo até a célula no canto inferior direito da grade, obedecendo à regra de que apenas movimentos para a direita ou para baixo são permitidos e quadrados com armadilhas são intransitáveis.
 
@@ -284,8 +256,6 @@ A solução implementada explora a técnica de c para calcular, de forma eficien
 ---
 
 ## [Exercise-15-EditDistance](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-15-EditDistance)
-
-**Título do Exercício:** Distância de Edição (Edit Distance)
 
 **Descrição do Problema:**
 Este exercício aborda o problema da distância de edição, também conhecido como distância de Levenshtein. Este problema clássico envolve determinar o número mínimo de operações de edição (inserções, deleções e substituições de caracteres) necessárias para transformar uma string em outra.
@@ -303,8 +273,6 @@ Implementamos três abordagens para calcular a distância de Levenshtein, sendo 
 
 ## [Exercise-16-LCS](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-16-LCS)
 
-**Título do Exercício:** Maior Subsequência Comum (LCS - Longest Common Subsequence)
-
 **Descrição do Problema:**
 Este exercício trata do problema da Maior Subsequência Comum. Este é um problema clássico em ciência da computação, onde o objetivo é encontrar a maior subsequência comum entre duas ou mais sequências de dados, sem a necessidade de os elementos estarem em sequência consecutiva.
 
@@ -321,8 +289,6 @@ A solução utiliza programação dinâmica, apresentando duas implementações,
 
 ## [Exercise-17-ShortestRoute](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-17-ShortestRoute)
 
-**Título do Exercício:** Rota Mais Curta (Shortest Route)
-
 **Descrição do Problema:**
 Este exercício trata do problema de encontrar a rota mais curta em uma rede ou grafo. Este é um problema clássico em algoritmos de grafos, onde o objetivo é determinar o caminho mais eficiente ou de menor distância entre dois ou mais pontos.
 
@@ -338,8 +304,6 @@ A solução implementada utiliza o algoritmo de Dijkstra para calcular a distân
 ---
 
 ## [Exercise-18-RoadReparation](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-18-RoadReparation)
-
-**Título do Exercício:** Reparação de Estradas (Road Reparation)
 
 **Descrição do Problema:**
 Dadas $n$ cidades conectadas por $m$ rodovias. As condições atuais das rodovias são precárias, exigindo reparos para garantir a transitabilidade. Cada rodovia entre duas cidades tem um custo associado ao seu reparo. O objetivo é determinar um conjunto de reparos nas rodovias que conecte todas as cidades com o menor custo total possível, garantindo que haja um caminho entre quaisquer duas cidades.
