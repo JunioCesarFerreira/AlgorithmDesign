@@ -414,4 +414,20 @@ Homer tem dois amigos, Alice e Bob, ambos fãs de strings. Eles decidem jogar um
 A solução em `stringGame.cpp` aborda o problema de manipular a string com base nas regras do jogo descritas.
 
 ---
+
+## [Exercise-25-NimGame](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-25-NimGame)
+
+**Descrição do Problema:**
+Este problema é baseado no jogo Nim, um jogo bem conhecido cujas regras são simples. O jogo consiste em M pilhas e N pedras. Os jogadores se revezam removendo qualquer número de pedras de qualquer pilha. Aquele que remove a última pedra perde. Este exercício parece adicionar uma variação ou um aspecto de "trapaça" ao jogo tradicional de Nim, embora os detalhes exatos dessa variação não sejam imediatamente claros.
+
+**Conteúdo do Diretório:**
+- `nimGame.cpp`: Código-fonte em C++ que implementa a solução para o jogo Nim.
+- `NimCheater.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução emprega um algoritmo para calcular o XOR lógico de todos os tamanhos das pilhas para determinar a estratégia vencedora inicial. Baseado nessa estratégia, identificam-se as ações necessárias para alterar o estado do jogo a favor do jogador inicial, minimizando o número de pedras removidas.
+
+---
 ---
