@@ -447,4 +447,19 @@ Este exercício trata do Algoritmo de Knuth-Morris-Pratt. Este é um método efi
 A solução em `kmp.cpp` implementa o algoritmo KMP para realizar buscas rápidas e eficientes de substrings em um texto. O algoritmo deve ser capaz de processar a palavra e o texto para encontrar todas as ocorrências da palavra, otimizando o processo de comparação.
 
 ---
+
+## [Exercise-27-StringQueries](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-27-StringQueries)
+
+**Descrição do Problema:**
+John Baptist um entusiasta de palavras, mantém uma lista de palavras que ele gosta. Às vezes, ele deixa de gostar de uma palavra e a apaga da lista. Ocasionalmente, ele pensa em uma nova palavra e quer saber quantas palavras na lista começam com essa palavra. O desafio é ajudar John a responder a essas consultas de forma eficiente, considerando que contar palavra por palavra na lista pode ser entediante e demorado.
+
+**Conteúdo do Diretório:**
+- `stgQueries.cpp`: Código-fonte em C++ que implementa a solução para as consultas de string de John Baptist.
+- `B - String Queries.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução utiliza estruturas de dados como árvores de prefixos para gerenciar a lista de palavras e responder rapidamente às consultas de John.
+
 ---
