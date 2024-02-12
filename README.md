@@ -399,4 +399,19 @@ O enunciado deste exercício conta a história de Little Pippy, que recebeu muit
 A solução faz uso de operações modulares para garantir que a distribuição dos chocolates seja feita de forma a maximizar a igualdade entre os amigos de Pippy e determinar a quantidade de chocolates que sobrará para Kittu, o gato
 
 ---
+
+## [Exercise-24-YetAnotherStringGame](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-24-YetAnotherStringGame)
+
+**Descrição do Problema:**
+Homer tem dois amigos, Alice e Bob, ambos fãs de strings. Eles decidem jogar um jogo com uma string de letras minúsculas do alfabeto inglês. Eles jogam alternadamente, com Alice começando. Em cada jogada, um jogador escolhe um índice não escolhido anteriormente na string e altera o caractere naquele índice para outra letra minúscula à sua escolha. O objetivo do jogo e as regras exatas não são imediatamente claras, mas parecem envolver estratégias para alterar a string de maneiras específicas.
+
+**Conteúdo do Diretório:**
+- `stringGame.cpp`: Código-fonte em C++ que implementa a solução para o jogo de strings.
+- `1480A.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução em `stringGame.cpp` aborda o problema de manipular a string com base nas regras do jogo descritas.
+
+---
 ---
