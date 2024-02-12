@@ -431,4 +431,20 @@ Este problema é baseado no jogo Nim, um jogo bem conhecido cujas regras são si
 A solução emprega um algoritmo para calcular o XOR lógico de todos os tamanhos das pilhas para determinar a estratégia vencedora inicial. Baseado nessa estratégia, identificam-se as ações necessárias para alterar o estado do jogo a favor do jogador inicial, minimizando o número de pedras removidas.
 
 ---
+
+## [Exercise-26-KMP](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-26-KMP)
+
+**Descrição do Problema:**
+Este exercício trata do Algoritmo de Knuth-Morris-Pratt. Este é um método eficiente para busca de substrings, utilizado para encontrar a ocorrência de uma palavra dentro de um texto maior sem a necessidade de reiniciar a busca a cada falha.
+
+**Conteúdo do Diretório:**
+- `kmp.cpp`: Código-fonte em C++ que implementa o algoritmo KMP para busca de substrings.
+- `substring.pdf`:  Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução em `kmp.cpp` implementa o algoritmo KMP para realizar buscas rápidas e eficientes de substrings em um texto. O algoritmo deve ser capaz de processar a palavra e o texto para encontrar todas as ocorrências da palavra, otimizando o processo de comparação.
+
+---
 ---
