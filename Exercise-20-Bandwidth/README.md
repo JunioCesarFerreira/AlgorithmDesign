@@ -1,4 +1,4 @@
-# Exercise Maximum Network Flow
+# Exercise Bandwidth
 
 ## Enunciado
 
