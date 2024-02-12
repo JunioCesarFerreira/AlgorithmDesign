@@ -327,10 +327,28 @@ No desafio "Team Division", Uolevi deseja dividir os $n$ alunos de sua classe em
 **Conteúdo do Diretório:**
 - `buildTeams.cpp`: Código-fonte em C++ que implementa a solução para o problema de formação de equipes.
 - `BuildingTeams.pdf`: Documento original que descreve o exercício.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivo executável e casos de teste.
 
 **Abordagem da Solução:**
 A solução em `buildTeams.cpp` utiliza algoritmos de teoria dos grafos para abordar a formação de equipes, aplicando uma abordagem de busca em profundidade (DFS) para tentar colorir o grafo de forma a satisfazer as restrições.
+
+---
+
+## [Exercise-20-Bandwidth](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-20-Bandwidth)
+
+
+**Descrição do Problema:**
+O exercício "Bandwidth" aborda um problema relacionado à capacidade de transmissão de dados (largura de banda) em uma rede. Em uma rede como a Internet, os nós (máquinas) estão ricamente interconectados, e várias rotas podem existir entre um par de nós. A largura de banda total entre dois nós é a quantidade máxima de dados por unidade de tempo que pode ser transmitida de um nó para outro. O problema envolve a utilização de técnicas como o packet switching para transmitir dados ao longo de várias rotas simultaneamente.
+
+**Conteúdo do Diretório:**
+- Arquivos `bandwidth.cpp`, `FordFulkerson.cpp`, entre outros: Códigos-fonte em C++ que implementam algoritmos para calcular a largura de banda em uma rede.
+- `p820.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivos executáveis e casos de teste.
+
+**Abordagem da Solução:**
+As soluções nos arquivos de código-fonte utilizam o algoritmo de Ford-Fulkerson, para calcular a largura de banda em uma rede.
 
 ---
 ---
