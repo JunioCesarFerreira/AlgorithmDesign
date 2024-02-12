@@ -351,4 +351,20 @@ O exercício "Bandwidth" aborda um problema relacionado à capacidade de transmi
 As soluções nos arquivos de código-fonte utilizam o algoritmo de Ford-Fulkerson, para calcular a largura de banda em uma rede.
 
 ---
+
+## [Exercise-21-AverageLengthBetweenPages](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-21-AverageLengthBetweenPages)
+
+**Descrição do Problema:**
+Neste exercício é abordado um problema relacionado ao cálculo do comprimento médio do caminho em uma rede, como a World Wide Web. Foi relatado que, em média, apenas 19 cliques são necessários para mover de qualquer página na Web para outra. O desafio é encontrar o comprimento médio do caminho mais curto entre pares arbitrários de nós em um grafo, onde todos os nós podem ser alcançados a partir de qualquer ponto de partida.
+
+**Conteúdo do Diretório:**
+- `averageLengthBetweenPages.cpp`: Código-fonte em C++ que implementa o cálculo do comprimento médio do caminho entre páginas.
+- `p821.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução aplica o algoritmo de Floyd-Warshall para encontrar todas as distâncias mínimas e, em seguida, calcula e exibe o comprimento médio do caminho mais curto entre todos os pares de vértices.
+
+---
 ---
