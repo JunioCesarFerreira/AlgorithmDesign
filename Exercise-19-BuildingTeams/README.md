@@ -1,6 +1,6 @@
 # Exercise Team Division
 
-## Enunciado Refinado
+## Enunciado
 
 No desafio "Team Division", Uolevi deseja dividir os $n$ alunos de sua classe em dois times, de modo que nenhum par de alunos que sejam amigos fique no mesmo time. Existem $m$ amizades entre os alunos, e a tarefa é organizar os alunos em dois times, garantindo que as restrições de amizade sejam respeitadas. A divisão dos times deve ser feita de forma que qualquer configuração que atenda a essa condição seja considerada válida, independentemente do tamanho dos times.
 
