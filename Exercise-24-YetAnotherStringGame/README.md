@@ -1,4 +1,4 @@
-# Exercise String Game Between Alice and Bob
+# Exercise Yet Another String Game
 
 ## Enunciado Refinado
 
