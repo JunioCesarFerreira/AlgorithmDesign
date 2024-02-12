@@ -397,4 +397,6 @@ O enunciado deste exercício conta a história de Little Pippy, que recebeu muit
 
 **Abordagem da Solução:**
 A solução faz uso de operações modulares para garantir que a distribuição dos chocolates seja feita de forma a maximizar a igualdade entre os amigos de Pippy e determinar a quantidade de chocolates que sobrará para Kittu, o gato
+
+---
 ---
