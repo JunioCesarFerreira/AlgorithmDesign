@@ -318,4 +318,19 @@ Dadas $n$ cidades conectadas por $m$ rodovias. As condições atuais das rodovia
 A solução implementada emprega o algoritmo de Kruskal para encontrar a árvore geradora mínima.
 
 ---
+
+## [Exercise-19-BuildingTeams](https://github.com/JunioCesarFerreira/AlgorithmDesign/tree/main/Exercise-19-BuildingTeams)
+
+**Descrição do Problema:**
+No desafio "Team Division", Uolevi deseja dividir os $n$ alunos de sua classe em dois times, de modo que nenhum par de alunos que sejam amigos fique no mesmo time. Existem $m$ amizades entre os alunos, e a tarefa é organizar os alunos em dois times, garantindo que as restrições de amizade sejam respeitadas.
+
+**Conteúdo do Diretório:**
+- `buildTeams.cpp`: Código-fonte em C++ que implementa a solução para o problema de formação de equipes.
+- `BuildingTeams.pdf`: Documento original que descreve o exercício.
+- Arquivo executável e casos de teste.
+
+**Abordagem da Solução:**
+A solução em `buildTeams.cpp` utiliza algoritmos de teoria dos grafos para abordar a formação de equipes, aplicando uma abordagem de busca em profundidade (DFS) para tentar colorir o grafo de forma a satisfazer as restrições.
+
+---
 ---
