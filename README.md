@@ -408,6 +408,7 @@ Homer tem dois amigos, Alice e Bob, ambos fãs de strings. Eles decidem jogar um
 **Conteúdo do Diretório:**
 - `stringGame.cpp`: Código-fonte em C++ que implementa a solução para o jogo de strings.
 - `1480A.pdf`: Documento descrevendo o exercício e fornecendo detalhes sobre o problema.
+- `README.md`: Descrevendo mais detalhes do problema e do conteúdo deste subdiretório.
 - Arquivo executável e casos de teste.
 
 **Abordagem da Solução:**
