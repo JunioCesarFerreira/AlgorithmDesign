@@ -501,7 +501,7 @@ Este repositório contém uma coleção de implementações de algoritmos e estr
 
 ## Licença
 
-Este repositório está licenciado sob a Licença MIT [LICENSE.md](LICENSE).
+Este repositório está licenciado sob a [Licença MIT](LICENSE).
 
 
 ---
