@@ -7,7 +7,7 @@ Soluções de exercícios resolvidos na disciplina Projetos de Algoritimos cursa
 Toda solução possui um `exe` previamente compilado com `gcc`. Para compilar novas versões em seu ambiente, instale o `gcc` compilador de `C/C++` e execute o seguinte prompt:
 
 ```shell
-gcc -o prog_name ./path/code.cpp
+g++ -o prog_name ./path/code.cpp
 ```
 
 Todo problema possui um diretório de `TestCase` neste estão alguns casos de testes com suas entradas e saídas esperadas, por exemplo, para executar a caso 1 faça:
