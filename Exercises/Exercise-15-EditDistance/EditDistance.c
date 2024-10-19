@@ -26,7 +26,7 @@ int levRec(int i, int j)
     return 1 + MIN3(levRec(i-1,j), levRec(i,j-1), levRec(i-1,j-1));
 }
 
-// Recursive with dp (Time complexity O(N^2))
+// Recursive with dp (Time complexity O(MxN))
 int levDpRec(int i, int j)
 {
     if (dp[i][j]==-1)
@@ -46,7 +46,7 @@ int levDpRec(int i, int j)
     return dp[i][j];
 }
 
-// Iterative dp (Time complexity O(N^2))
+// Iterative dp (Time complexity O(MxN))
 int levDpIt(int m, int n)
 {
     for (int i=0; i <= m; i++)

@@ -2,7 +2,7 @@
 
 ## Enunciado
 
-O problema "Edit Distance" envolve calcular a distância mínima de edição entre duas strings, que é o número mínimo de operações necessárias para transformar uma string na outra. As operações permitidas são inserção, deleção ou substituição de um único caractere. Dadas duas strings, o objetivo é determinar a distância de Levenshtein entre elas, que reflete a semelhança ou diferença em termos de suas sequências de caracteres.
+O problema "Edit Distance" envolve calcular a distância mínima de edição entre duas strings, que é o número mínimo de operações necessárias para transformar uma string na outra. As operações permitidas são inserção, exclusão ou substituição de um único caractere. Dadas duas strings, o objetivo é determinar a distância de Levenshtein entre elas, que reflete a semelhança ou diferença em termos de suas sequências de caracteres.
 
 ## Formulação Matemática do Problema
 
@@ -26,6 +26,6 @@ O programa implementa três abordagens para calcular a distância de Levenshtein
 
 1. **Recursiva Pura (`levRec`):** Calcula a distância de forma recursiva sem armazenamento intermediário, resultando em tempo de complexidade $O(3^N)$ devido à repetição de cálculos.
    
-2. **Recursiva com DP (`levDpRec`):** Usa memorização para evitar cálculos repetidos, armazenando resultados intermediários em `dp`, reduzindo a complexidade de tempo para $O(N^2)$.
+2. **Recursiva com DP (`levDpRec`):** Usa memoização para evitar cálculos repetidos, armazenando resultados intermediários em `dp`, reduzindo a complexidade de tempo para $O(M\times N)$.
    
-3. **Iterativa com DP (`levDpIt`):** Abordagem iterativa que preenche a matriz `dp` de forma progressiva, também com tempo de complexidade $O(N^2)$. Esta é a abordagem mais eficiente entre as implementadas, oferecendo uma solução direta e otimizada para o problema.
+3. **Iterativa com DP (`levDpIt`):** Abordagem iterativa que preenche a matriz `dp` de forma progressiva, também com tempo de complexidade $O(M\times N)$. Esta é a abordagem mais eficiente entre as implementadas, oferecendo uma solução direta e otimizada para o problema.

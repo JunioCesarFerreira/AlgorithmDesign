@@ -5,3 +5,4 @@ extraC#/ConsoleAppGraph/obj/Debug/ConsoleAppGraph.csproj.FileListAbsolute.txt
 extraC#/ConsoleAppGraph/bin/Debug/ConsoleAppGraph.exe.config
 *.pdb
 .vscode
+*.o
